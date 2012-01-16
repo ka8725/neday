@@ -50,5 +50,9 @@ module Neday
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
+      config.generators do |g|
+        g.test_framework :rspec, :fixture => true, :views => false
+        g.fixture_replacement :factory_girl, :dir => 'spec/factories'
+      end
+    end
 end
