@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Neday</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header class='main'>
+    <div class='logo'>
+    </div>
+    <nav>
+      <ul>
+        <li class='active'><a href='#'>Главная</a></li>
+        <li><a href='#'>События</a></li>
+        <li><a href='#'>Оппоненты</a></li>
+        <li><a href='#'>Турниры</a></li>
+        <li><a href='#'>Команды</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class='main clear'>
+    <section class='side'>
+      <section class='bordered'>
+        <header>
+          <h3>Мое Пространство</h3>
+        </header>
+        <nav>
+          <ul>
+            <li class='active'>
+              <a href='#'>Профайл</a>
+            </li>
+            <li>
+              <a href='#'>События</a>
+            </li>
+            <li>
+              <a href='#'>Турниры</a>
+            </li>
+            <li>
+              <a href='#'>Регистриция</a>
+            </li>
+            <li>
+              <a href='#'>Войти</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+    <section class='content'>
+      <header>
+        <h3>Домашняя страница</h3>
+      </header>
+      <iframe width="540" height="315" src="http://www.youtube.com/embed/tGpD2rrki2E" frameborder="0" allowfullscreen></iframe>
+      <%= yield %>
+      <p>Do your layouts deserve better than Lorem Ipsum? Apply as an art director and team up with the best copywriters at Jung von Matt: www.jvm.com/jobs/lipsum
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac nulla neque. Duis orci turpis, malesuada nec hendrerit a, dapibus sed arcu. Suspendisse risus nulla, mollis sed fringilla sit amet, tincidunt at dui. Curabitur adipiscing, nibh vitae blandit consequat, elit urna convallis elit, quis accumsan nisl mi in mauris. Proin at justo enim, vitae consectetur massa. Praesent pellentesque nunc vitae est pretium eleifend. Nulla varius pulvinar lacus, ut vehicula nulla tempor nec. Donec eu ligula a est condimentum vulputate. Aliquam congue sagittis ipsum eget fermentum. Fusce congue massa ut arcu tristique sit amet sodales nunc elementum. Cras molestie neque ut nisi faucibus quis cursus sapien blandit.
+      </p>
+      <a href='#' class='button'><span>Присоединиться</span></a>
+    </section>
+    <section class='side right'>
+      <section class='bordered'>
+        <header>
+          <h3>Последние События</h3>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <small>12/01/01</small>
+              <h4><a href='#'>Футбол.&nbsp;Стадион&nbsp;"Динамо"</a></h4>
+            </li>
+            <li>
+              <small>12/01/01</small>
+              <h4><a href='#'>Футбол.&nbsp;Стадион&nbsp;"Динамо"</a></h4>
+            </li>
+            <li>
+              <small>12/01/01</small>
+              <h4><a href='#'>Футбол.&nbsp;Стадион&nbsp;"Динамо"</a></h4>
+            </li>                  <li>
+              <h4><a href='#'>Еще...</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class='bordered'>
+        <header>
+          <h3>Новые Команды</h3>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <small>Футбол</small>
+              <h4><a href='#'>Название команды</a></h4>
+            </li>
+            <li>
+              <small>Волейбол</small>
+              <h4><a href='#'>Название команды</a></h4>
+            </li>
+            <li>
+              <small>Теннис</small>
+              <h4><a href='#'>Название команды</a></h4>
+            </li>
+            <li>
+              <h4><a href='#'>Еще...</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class='bordered'>
+        <header>
+          <h3>Новые Турниры</h3>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <small>Футбол</small>
+              <h4><a href='#'>Название турнира</a></h4>
+            </li>
+            <li>
+              <small>Волейбол</small>
+              <h4><a href='#'>Название турнира</a></h4>
+            </li>
+            <li>
+              <small>Теннис</small>
+              <h4><a href='#'>Название турнира</a></h4>
+            </li>
+            <li>
+              <h4><a href='#'>Еще...</a></h4>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+  </section>
+  <div class='clear'></div>
+  <footer class='main'>
+    <p>Copyright © 2012, Neday</p>
+  </footer>
 </body>
 </html>
