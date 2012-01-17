@@ -1,5 +1,5 @@
 require 'bundler/capistrano'
-set :default_environment, { "PATH" => "/var/lib/gems/1.9.1/bin:$PATH" }
+set :default_environment, { "PATH" => "/home/ubuntu/.rbenv/versions/1.9.2-p290/bin:$PATH" }
 set :application, "neday"
 set :deploy_to, "/home/ubuntu/neday"
 set :rails_env, 'production'
