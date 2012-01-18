@@ -20,13 +20,17 @@ end
 
 gem 'jquery-rails'
 
-gem 'pg', :group => :development
+group :development do
+  gem 'pg'
+  gem 'capistrano'
+end
 
 group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'faker'
+  gem 'mocha'
 end
 
 # To use ActiveModel has_secure_password

@@ -6,7 +6,7 @@ a {color: #6e6e6e; text-decoration: none;}
 a:hover {color: #ff001e !important;}
 .main {width: 1100px; margin: 0 auto;}
 header.main {
-  height: 253px; background: url(/assets/logo.png); margin-top: 10px;
+  height: 253px; background: url(/assets/logo.png); margin-top: 10px; @include border-radius(10px); @include box-shadow(0 0 10px #000);
   .overlay {background: #000; border-top: 1px solid; border-bottom: 1px solid; position: relative; top: 210px; height: 35px; @include opacity(0.6);}
   nav {
     ul {
@@ -25,9 +25,9 @@ section.main {min-height: 350px;}
 section.main > section {float: left;}
 section.main > section.side {width: 240px;}
 section.main > section.content {width: 540px; margin: 0 20px;}
-footer.main {background: #000; margin-top: 20px; height: 75px; color: #fff;  @include border-radius(15px 15px 0 0);}
+footer.main {background: #000; margin-top: 20px; height: 75px; color: #fff;  @include border-radius(15px 15px 0 0); @include box-shadow(0 0 10px #000);}
 .bordered {
-  nav {border: 5px solid #fff; @include border-radius(5px); background: url(/assets//bordered.png);}
+  nav {border: 2px solid #fff; @include border-radius(5px); background: url(/assets//bordered.png); @include box-shadow(0 0 10px #000);}
   ul {
     list-style-type: none;
     li {
