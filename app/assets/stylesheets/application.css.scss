@@ -1,12 +1,12 @@
 @import "compass";
 @import "_blueprint";
-body {margin: 0 auto; background: url(/assets//bg.png); font-family: "lucida grande",tahoma,verdana,arial,sans-serif; font-size: 14px; color: #6e6e6e;}
+body {margin: 0 auto; background: url(/assets/bg.png); font-family: "lucida grande",tahoma,verdana,arial,sans-serif; font-size: 14px; color: #6e6e6e;}
 nav, header, footer, section {display: block;}
 a {color: #6e6e6e; text-decoration: none;}
 a:hover {color: #ff001e !important;}
 .main {width: 1100px; margin: 0 auto;}
 header.main {
-  height: 253px; background: url(/assets/logo.png); margin-top: 10px; @include border-radius(10px); @include box-shadow(0 0 10px #000);
+  height: 253px; background: url(/assets/logo.jpg); margin-top: 10px; @include border-radius(10px); @include box-shadow(0 0 10px #000);
   .overlay {background: #000; border-top: 1px solid; border-bottom: 1px solid; position: relative; top: 210px; height: 35px; @include opacity(0.6);}
   nav {
     ul {
@@ -27,7 +27,7 @@ section.main > section.side {width: 240px;}
 section.main > section.content {width: 540px; margin: 0 20px;}
 footer.main {background: #000; margin-top: 20px; height: 75px; color: #fff;  @include border-radius(15px 15px 0 0); @include box-shadow(0 0 10px #000);}
 .bordered {
-  nav {border: 2px solid #fff; @include border-radius(5px); background: url(/assets//bordered.png); @include box-shadow(0 0 10px #000);}
+  nav {border: 2px solid #fff; @include border-radius(5px); background: url(/assets/bordered.png); @include box-shadow(0 0 10px #000);}
   ul {
     list-style-type: none;
     li {
@@ -47,5 +47,5 @@ section.right {
 footer.main p {text-align: center; width: 100%; padding-top: 20px; font-weight: lighter; font-size: 10px;}
 section.main > section.content > a.button {margin-left: 190px;}
 a.button {display: block; color: #fff; font-weight: bold;}
-a.button span {background: url(/assets//button.png) no-repeat; width: 160px; display: block; height: 41px; text-align: center; padding-top: 7px;}
+a.button span {background: url(/assets/button.png) no-repeat; width: 160px; display: block; height: 41px; text-align: center; padding-top: 7px;}
 .side.right {float:right;}
