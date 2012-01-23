@@ -4,10 +4,13 @@ gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-gem 'mysql2', :group => :production
+gem 'mysql2'
 
 gem 'json'
 gem 'therubyracer'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'settingslogic'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,7 +24,6 @@ end
 gem 'jquery-rails'
 
 group :development do
-  gem 'pg'
   gem 'capistrano'
 end
 

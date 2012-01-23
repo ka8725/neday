@@ -1,0 +1,11 @@
+development:
+  fb:
+    app_id: '166205056822008'
+    app_secret: '8291b8e4090f9e36bb71ab564519c498'
+
+test:
+
+production:
+  fb:
+    app_id: '335195876511579'
+    app_secret: '7dd87dcc985b6446257313358bda6811'
