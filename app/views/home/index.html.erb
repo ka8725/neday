@@ -7,6 +7,7 @@
     Не дай погоде. Не дай лени. Не дай красоте. Не дай городу. Не дай тесноте. Не дай сомнениям. Не дай стереотипам. Не дай себя остановить!
     Хватит терять свое здоровье сидя за креслом. Хватит толстеть и деградировать!
   </p>
-  <a href='#' class='button'><span>Присоединияйся!</span></a>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+  <%= link_to login_new_path, :class => 'button' do %>
+    <span>Присоединияйся!</span>
+  <% end %>
 </section>
