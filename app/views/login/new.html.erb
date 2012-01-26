@@ -5,7 +5,12 @@
   <article>
     <aside>
       <header>Используйте существующий аккаунт</header>
-      <%= link_to user_omniauth_authorize_path(:facebook), :class => 'icon facebook', :alt => 'Вход через Facebook', :title => 'Вход через Facebook' do %>
+      <%= link_to user_omniauth_authorize_path(:facebook),
+            :class => 'icon facebook', :alt => 'Вход через Facebook', :title => 'Вход через Facebook' do %>
+        <span></span>
+      <% end %>
+      <%= link_to user_omniauth_authorize_path(:vkontakte),
+            :class => 'icon vkontakte', :alt => 'Вход через ВКонтакте', :title => 'Вход через ВКонтакте' do %>
         <span></span>
       <% end %>
     </aside>

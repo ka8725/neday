@@ -1,6 +1,7 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 require "omniauth-facebook"
+require "omniauth-vkontakte"
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -208,4 +209,5 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
   config.omniauth :facebook, Settings.fb.app_id, Settings.fb.app_secret
+  config.omniauth :vkontakte, Settings.vk.app_id, Settings.vk.app_secret
 end
