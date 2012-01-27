@@ -2,6 +2,8 @@
 # Many of these configuration options can be set straight in your model.
 require "omniauth-facebook"
 require "omniauth-vkontakte"
+require "omniauth-twitter"
+require 'openid/store/filesystem'
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -210,4 +212,6 @@ Devise.setup do |config|
   # end
   config.omniauth :facebook, Settings.fb.app_id, Settings.fb.app_secret
   config.omniauth :vkontakte, Settings.vk.app_id, Settings.vk.app_secret
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
+  config.omniauth :twitter, Settings.twitter.consumer_key, Settings.twitter.consumer_secret
 end

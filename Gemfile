@@ -10,7 +10,9 @@ gem 'json'
 gem 'therubyracer'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth-openid'
 gem 'omniauth-vkontakte'
+gem 'omniauth-twitter'
 gem 'settingslogic'
 
 # Gems used only for assets and not required

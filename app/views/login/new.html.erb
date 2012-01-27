@@ -13,6 +13,14 @@
             :class => 'icon vkontakte', :alt => 'Вход через ВКонтакте', :title => 'Вход через ВКонтакте' do %>
         <span></span>
       <% end %>
+      <%= link_to user_omniauth_authorize_path(:google),
+            :class => 'icon google', :alt => 'Вход через Google', :title => 'Вход через Google' do %>
+        <span></span>
+      <% end %>
+      <%= link_to user_omniauth_authorize_path(:twitter),
+            :class => 'icon twitter', :alt => 'Вход через Twitter', :title => 'Вход через Twitter' do %>
+        <span></span>
+      <% end %>
     </aside>
   </article>
 </section>

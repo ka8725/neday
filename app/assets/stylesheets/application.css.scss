@@ -57,10 +57,11 @@ a.button {
   span {background: url(/assets/button.png) no-repeat; width: 160px; display: block; height: 41px; text-align: center; padding-top: 7px;}
 }
 a.icon {
-  display: block;
-  width: 32px; height: 32px;
+  display: block; width: 32px; height: 32px; float: left; margin: 2px;
   span{width: 32px; height: 32px; display: block;}
 }
 a.icon.facebook span {background: url('/assets/facebook.png'); width: 32px; height: 32px;}
 a.icon.vkontakte span {background: url('/assets/vkontakte.png'); width: 32px; height: 32px;}
+a.icon.google span {background: url('/assets/google.png'); width: 32px; height: 32px;}
+a.icon.twitter span {background: url('/assets/twitter.png'); width: 32px; height: 32px;}
 .side.right {float:right;}

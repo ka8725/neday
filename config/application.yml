@@ -5,6 +5,9 @@ development:
   vk:
     app_id: '2773786'
     app_secret: 'Zq6VkORNGdMmYvmVxO80'
+  twitter:
+    consumer_key: '168426826-qovqSyqsedyOFTe9Y4QUHoRUDhM6q6JpSOx9gnf5'
+    consumer_secret: 'osluKK9pOIMBuPrMVBRoUkk7ZVCW5ULFq1CuJ7BfA'
 
 test:
 
@@ -13,5 +16,8 @@ production:
     app_id: '335195876511579'
     app_secret: '7dd87dcc985b6446257313358bda6811'
   vk:
-      app_id: '2773815'
-      app_secret: 'bcFSmH0yohYIcEGthe56'
+    app_id: '2773815'
+    app_secret: 'bcFSmH0yohYIcEGthe56'
+  twitter:
+    consumer_key: 'i6YrFj8WOZuwE5sWYzHUYQ'
+    consumer_secret: '5fZmAHaJ1A0nzlEwiPgwuV3xtM91PRGyi3hgKwcfuCE'
