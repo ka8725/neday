@@ -6,8 +6,8 @@ development:
     app_id: '2773786'
     app_secret: 'Zq6VkORNGdMmYvmVxO80'
   twitter:
-    consumer_key: '168426826-qovqSyqsedyOFTe9Y4QUHoRUDhM6q6JpSOx9gnf5'
-    consumer_secret: 'osluKK9pOIMBuPrMVBRoUkk7ZVCW5ULFq1CuJ7BfA'
+    consumer_key: '168426826-cMu1xQxCot7PavLvSN6FbTBKjZNp9Rg1b7ER7jf7'
+    consumer_secret: 'gvB2ElkQBpYdrsg07qcozcEsywrZjBnAfjTYbdi8HX4'
 
 test:
 
@@ -19,5 +19,5 @@ production:
     app_id: '2773815'
     app_secret: 'bcFSmH0yohYIcEGthe56'
   twitter:
-    consumer_key: 'i6YrFj8WOZuwE5sWYzHUYQ'
-    consumer_secret: '5fZmAHaJ1A0nzlEwiPgwuV3xtM91PRGyi3hgKwcfuCE'
+    consumer_key: 'db8gYNPmMIuNiyy33aiTQ'
+    consumer_secret: '5FzVqAAVJ9I26mZ1FYUnx2WGf0yApUzSgtC5Y8aLa8'
