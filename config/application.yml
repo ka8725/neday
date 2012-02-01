@@ -6,8 +6,8 @@ development:
     app_id: '2773786'
     app_secret: 'Zq6VkORNGdMmYvmVxO80'
   twitter:
-    consumer_key: '168426826-cMu1xQxCot7PavLvSN6FbTBKjZNp9Rg1b7ER7jf7'
-    consumer_secret: 'gvB2ElkQBpYdrsg07qcozcEsywrZjBnAfjTYbdi8HX4'
+    consumer_key: 'vfeRImKs04QjpvIo8BP2g'
+    consumer_secret: 'l8xjPC1uPyppAQ9TSiOr5wHFT7BmTUQ5T0TIhYNY1k'
 
 test:
 
