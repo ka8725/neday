@@ -13,13 +13,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div>
+    <%= alert %>
+    <%= notice %>
+  </div>
   <header class='main'>
     <nav>
       <div class='overlay'></div>
       <ul>
         <li class='active'><a href='#'>Главная</a></li>
         <li><a href='#'>События</a></li>
-        <li><a href='#'>Оппоненты</a></li>
+        <li><%= link_to 'Оппоненты', users_path %></li>
         <li><a href='#'>Турниры</a></li>
         <li><a href='#'>Команды</a></li>
       </ul>
@@ -45,9 +49,15 @@
             <li>
               <a href='#'>Регистриция</a>
             </li>
-            <li>
-              <a href='#'>Войти</a>
-            </li>
+            <% if signed_in? %>
+              <li>
+                <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to 'Войти', login_new_path %>
+              </li>
+            <% end %>
           </ul>
         </nav>
       </section>

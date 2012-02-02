@@ -14,6 +14,9 @@ gem 'omniauth-openid'
 gem 'omniauth-vkontakte'
 gem 'omniauth-twitter'
 gem 'settingslogic'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'inherited_resources'
 
 # Gems used only for assets and not required
 # in production environments by default.

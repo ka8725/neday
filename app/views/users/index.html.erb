@@ -1,0 +1,10 @@
+<section class='content'>
+  <header>
+    <h1>Оппоненты</h1>
+  </header>
+  <%= content_tag_for(:article, @users) do |user| %>
+    <%= user.name %>
+    <%= mail_to user.email, 'Email' %>
+    <%= image_tag user.avatar %>
+  <% end %>
+</section>
