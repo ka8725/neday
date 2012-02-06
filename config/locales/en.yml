@@ -3,6 +3,3 @@
 
 en:
   hello: "Hello world"
-  navbar:
-    home: 'Home'
-    opponents: 'Opponents'

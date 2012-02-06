@@ -18,7 +18,12 @@
     <%= render 'shared/header' %>
     <div class="container">
         <div class="content">
-          <%= yield %>
+          <div class="row">
+            <div class="span12">
+            <%= flash_messages %>
+            <%= yield %>
+            </div>
+          </div>
         </div>
         <hr>
       <footer>
