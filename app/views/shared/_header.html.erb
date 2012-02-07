@@ -9,7 +9,12 @@
       <%= link_to 'Neday', root_path, :class => 'brand' %>
       <div class="container nav-collapse">
         <%= render_navigation %>
-      </div><!--/.nav-collapse -->
+        <% if user_signed_in? %>
+          <p class='navbar-text pull-right'>
+            Привет, <%= link_to current_user.first_name, current_user %>!
+          </p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
