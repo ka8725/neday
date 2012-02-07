@@ -15,15 +15,59 @@
       <a class="left carousel-control" href="#carousel" data-slide="prev">‹</a>
       <a class="right carousel-control" href="#carousel" data-slide="next">›</a>
     </div>
-    <%= link_to t('connect'), login_new_path, :class => 'btn btn-large custom btn-primary' %>
   </div>
 </div>
-<hr>
+<div class='hero-unit'>
+  <h1>Не дай себя остановить!</h1>
+  <p>
+    <%= link_to t('connect'), login_new_path, :class => 'btn btn-large btn-primary' %>
+  </p>
+  <div class='like-buttons'>
+    <div class='item'>
+      <div class="fb-like" data-href="http://neday.org" data-send="false" data-layout="button_count" data-width="180" data-show-faces="false" data-action="recommend" data-font="arial"></div>
+    </div>
+    <div class='item'>
+      <g:plusone size="tall" annotation="inline" width="240"></g:plusone>
+    </div>
+    <div class='item'>
+      <div id="vk_like"></div>
+    </div>
+  </div>
+</div>
 <div class='row'>
-  <div class='span4'>
-    <h4>Преимущества сервиса</h4>
+  <div class='span3'>
+    <h3>Спортивные события</h3>
     <ul class='unstyled'>
-      <li><span class='icon-check'></span>Hidhs</li>
+      <li><span class='icon-ok'></span>Создание</li>
+      <li><span class='icon-ok'></span>Управление</li>
+      <li><span class='icon-ok'></span>Поиск</li>
+      <li><span class='icon-ok'></span>Принятие участия</li>
+    </ul>
+  </div>
+  <div class='span3'>
+    <h3>Соучастники</h3>
+    <ul class='unstyled'>
+      <li><span class='icon-ok'></span>Регистрация</li>
+      <li><span class='icon-ok'></span>Поиск</li>
+      <li><span class='icon-ok'></span>Контакты</li>
+    </ul>
+  </div>
+  <div class='span3'>
+    <h3>Команды</h3>
+    <ul class='unstyled'>
+      <li><span class='icon-ok'></span>Создание</li>
+      <li><span class='icon-ok'></span>Управление</li>
+      <li><span class='icon-ok'></span>Поиск</li>
+      <li><span class='icon-ok'></span>Присоединение</li>
+    </ul>
+  </div>
+  <div class='span3'>
+    <h3>Турниры</h3>
+    <ul class='unstyled'>
+      <li><span class='icon-ok'></span>Создание</li>
+      <li><span class='icon-ok'></span>Управление</li>
+      <li><span class='icon-ok'></span>Поиск</li>
+      <li><span class='icon-ok'></span>Таблицы</li>
     </ul>
   </div>
 </div>

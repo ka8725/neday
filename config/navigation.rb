@@ -51,6 +51,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :home, t('navbar.home'), root_path
     primary.item :opponents, t('navbar.opponents'), users_path
+    primary.item :teams, t('navbar.teams'), ''
+    primary.item :tournaments, t('navbar.tournaments'), ''
 
     # # Add an item which has a sub navigation (same params, but with block)
     # primary.item :key_2, 'name', url, options do |sub_nav|

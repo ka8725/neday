@@ -1,0 +1,8 @@
+@import 'compass';
+body {padding-top: 60px;}
+.hero-unit {
+  p, h1 {text-align: center;}
+  .like-buttons .item {float: left;}
+  p .btn-large {padding: 14px 24px; font-size: 20px; font-weight: bold; @include border-radius(6px);}
+}
+.navbar-fixed-top .brand {font-weight: bold; color: #000; @include text-shadow(0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255, 255, 255, .125));}

@@ -21,10 +21,11 @@
           <%= yield %>
         </div>
         <hr>
-      <footer>
-        <p>&copy; Neday 2012</p>
-      </footer>
+        <footer>
+          <p>&copy; Neday 2012</p>
+        </footer>
     </div>
     <%= javascript_include_tag "application" %>
+    <%= render 'shared/like_buttons' %>
   </body>
 </html>
