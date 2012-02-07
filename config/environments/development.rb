@@ -24,7 +24,8 @@ Neday::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
-
+  config.reload_classes_only_on_change = true
+  config.watchable_dirs[File.join(config.root, "app/admin")] = ["rb"]
   # Expands the lines which load the assets
   config.assets.debug = true
   config.active_record.mass_assignment_sanitizer = :strict
