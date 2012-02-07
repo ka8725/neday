@@ -44,7 +44,3 @@ ru:
         first_name: Имя  #g
         last_name: Фамилия  #g
         avatar: Воплощение  #g
-
-  devise:
-    failure:
-      already_authenticated: Вы уже на сайте

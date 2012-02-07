@@ -14,15 +14,6 @@ GIT
       rails (>= 3.0.0)
       sass (>= 3.1.0)
 
-GIT
-  remote: git@github.com:ka8725/twitter-bootstrap-rails.git
-  revision: 712c6a50c80041234a497f364913a46f4bb75d00
-  specs:
-    twitter-bootstrap-rails (2.0.2)
-      actionpack (>= 3.1)
-      less-rails (~> 2.1.5)
-      railties (>= 3.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -260,6 +251,10 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.0.1)
+      actionpack (>= 3.1)
+      less-rails (~> 2.1.5)
+      railties (>= 3.1)
     tzinfo (0.3.31)
     uglifier (1.2.3)
       execjs (>= 0.3.0)
@@ -302,5 +297,5 @@ DEPENDENCIES
   settingslogic
   simple-navigation
   therubyracer
-  twitter-bootstrap-rails!
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
