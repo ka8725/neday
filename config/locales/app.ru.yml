@@ -2,5 +2,6 @@ ru:
   devise:
     form:
       sign_in: 'Войти'
-      sign_up: 'Зарегистрироваться'
+      sign_up: 'Регистрация'
+      sign_out: 'Выход'
       forgot_password: 'Забыли пароль?'

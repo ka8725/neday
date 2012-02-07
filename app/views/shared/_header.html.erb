@@ -9,11 +9,13 @@
       <%= link_to 'Neday', root_path, :class => 'brand' %>
       <div class="container nav-collapse">
         <%= render_navigation %>
-        <% if user_signed_in? %>
-          <p class='navbar-text pull-right'>
-            Привет, <%= link_to current_user.first_name, current_user %>!
-          </p>
-        <% end %>
+        <p class='navbar-text pull-right'>
+          <% if user_signed_in? %>
+            Привет, <%= link_to current_user.first_name, current_user %>
+          <% else %>
+            <%= link_to t('devise.form.sign_in'), new_session_path(:user) %>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>

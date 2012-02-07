@@ -22,6 +22,7 @@ gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "compass", "~> 0.12.alpha.0"
+gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

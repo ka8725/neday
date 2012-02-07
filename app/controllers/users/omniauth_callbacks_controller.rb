@@ -1,13 +1,17 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
     @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
-    if @user.new_record? && @user.save
+    if @user.new_record?
+      if @user.save
+        flash[:notice] = t("devise.omniauth_callbacks.success", :kind => "Facebook")
+        sign_in_and_redirect @user, :event => :authentication
+      else
+        flash[:error] = t("devise.omniauth_callbacks.failure", :kind => "Facebook", :reason => '')
+        render :template => 'devise/registrations/new'
+      end
+    else
       flash[:notice] = t("devise.omniauth_callbacks.success", :kind => "Facebook")
       sign_in_and_redirect @user, :event => :authentication
-    else
-      redirect_to new_user_registration_url, :alert => t("devise.omniauth_callbacks.success",
-                                                          :kind => "Facebook",
-                                                          :reason => "you have invalid data")
     end
   end
 
