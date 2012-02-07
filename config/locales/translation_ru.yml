@@ -1,0 +1,46 @@
+ru:
+  activerecord:
+    models:
+      active_admin/comment: Активный admin/комментарий  #g
+      slide: Скольжение  #g
+      admin_user: Потребитель Admin  #g
+      user: Потребитель  #g
+
+    attributes:
+      active_admin/comment:
+        resource_type: Тип ресурса  #g
+        author_type: Тип автора  #g
+        body: Тело  #g
+        namespace: Namespace  #g
+        resource: Ресурс  #g
+        author: Автор  #g
+
+      slide:
+        file: Архив  #g
+        title: Название  #g
+        description: Описание  #g
+
+      admin_user:
+        email: Электронная почта  #g
+        encrypted_password: Ый пароль  #g
+        reset_password_token: Переустановите знак внимания пароля  #g
+        reset_password_sent_at: Переустановите пароль посланный на  #g
+        remember_created_at: Вспомните создано на  #g
+        current_sign_in_at: Настояще подпишите внутри на  #g
+        last_sign_in_at: Последн подпишите внутри на  #g
+        current_sign_in_ip: Настояще подпишите внутри ip  #g
+        last_sign_in_ip: Последн подпишите внутри ip  #g
+
+      user:
+        email: Электронная почта  #g
+        encrypted_password: Ый пароль  #g
+        reset_password_token: Переустановите знак внимания пароля  #g
+        reset_password_sent_at: Переустановите пароль посланный на  #g
+        remember_created_at: Вспомните создано на  #g
+        current_sign_in_at: Настояще подпишите внутри на  #g
+        last_sign_in_at: Последн подпишите внутри на  #g
+        current_sign_in_ip: Настояще подпишите внутри ip  #g
+        last_sign_in_ip: Последн подпишите внутри ip  #g
+        first_name: Имя  #g
+        last_name: Фамилия  #g
+        avatar: Воплощение  #g

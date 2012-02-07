@@ -16,12 +16,12 @@ gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'inherited_resources'
 gem 'simple-navigation'
 gem 'rails3-generators'
-gem 'activeadmin'
+gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem 'sass-rails', '~> 3.2.3'
-gem 'meta_search', '>= 1.1.0.pre'
+gem 'i18n_generators'
+gem "compass", "~> 0.12.alpha.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,7 +29,6 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "compass", "~> 0.12.alpha.0"
 end
 
 gem 'jquery-rails'
