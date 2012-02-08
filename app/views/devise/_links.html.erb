@@ -1,3 +1,4 @@
+<p><strong>* Можно также войти через существующий аккаунт</strong></p>
 <% if devise_mapping.omniauthable? %>
   <% resource_class.omniauth_providers.each do |provider| %>
     <%= link_to omniauth_authorize_path(resource_name, provider), :class => "btn" do %>
