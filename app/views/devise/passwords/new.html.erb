@@ -1,10 +1,11 @@
-<div class='span5'>
+<div class='span5 well'>
   <h2><%= t('devise.form.forgot_password') %></h2>
-  <div class='well'>
-    <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f| %>
-      <%= f.input :email %>
-      <%= f.submit t('devise.form.forgot_password') %>
-    <% end %>
-  </div>
+  <hr>
+  <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post, :class => 'big-fields'}) do |f| %>
+    <%= f.input :email %>
+    <div class='centered'>
+      <%= f.submit t('form.submit'), :class => 'btn btn-primary' %>
+    </div>
+  <% end %>
   <%= render "links" %>
 </div>

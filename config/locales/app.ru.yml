@@ -5,3 +5,10 @@ ru:
       sign_up: 'Регистрация'
       sign_out: 'Выход'
       forgot_password: 'Забыли пароль?'
+  form:
+    submit: 'Готово'
+  activerecord:
+    attributes:
+      user:
+        password: 'Пароль'
+        password_confirmation: 'Проверочный пароль'
