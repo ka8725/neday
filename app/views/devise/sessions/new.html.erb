@@ -1,11 +1,11 @@
 <div class='span5 well'>
-  <h2><%= t('devise.form.sign_in') %></h2>
+  <h2>Вход</h2>
   <hr>
   <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'big-fields'}) do |f| %>
     <%= f.input :email %>
     <%= f.input :password %>
     <div class='centered'>
-      <%= f.submit t('form.submit'), :class => 'btn btn-primary' %>
+      <%= f.submit 'Войти', :class => 'btn btn-primary' %>
     </div>
   <% end %>
   <%= render "links" %>
