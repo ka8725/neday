@@ -5,7 +5,7 @@ set :deploy_to, "/home/ubuntu/neday"
 set :rails_env, 'production'
 set :branch, 'bootstrap'
 server 'neday.org', :web, :app, :db, :primary => true
-set :normalize_asset_timestamps, false
+# set :normalize_asset_timestamps, false
 
 set :use_sudo, false
 set :user, "ubuntu"

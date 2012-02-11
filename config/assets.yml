@@ -1,3 +1,5 @@
 s3_bucket: neday
 s3_access_key_id: AKIAISG2NZJDCFCR7QFQ
 s3_secret_access_key: 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
+s3_upload_files:
+  -  public/assets/**/*
