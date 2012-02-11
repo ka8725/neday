@@ -38,6 +38,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'capistrano'
+  gem 'jammit-s3'
 end
 
 group :test do

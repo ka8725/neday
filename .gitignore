@@ -8,3 +8,4 @@ config/database.yml
 vendor/bundle
 tmtags
 public/uploads
+public/assets`
