@@ -2,6 +2,8 @@
 
 FactoryGirl.define do
   factory :slide do
-      file "MyString"
-    end
+    sequence(:file) { |n| File.new(File.join(Rails.root, "spec/images/slide#{n % 2}.jpg")) }
+    title Faker::Name.title
+    description Faker::Lorem.paragraph
+  end
 end

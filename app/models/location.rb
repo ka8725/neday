@@ -13,6 +13,7 @@ class Location < ActiveRecord::Base
 
   private
   def translated_address
+    return unless address
     "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя".split('').any? {|letter| address.include?(letter) } ?
       address : Google::Translator.new.translate('', 'ru', address)
   end

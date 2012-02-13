@@ -4,4 +4,8 @@
 # Examples:
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Emanuel', :city => cities.first)
+#   Mayor.create(:name => 'Emanuel', :city => cities.first)1321269920noR5SG.jpg
+require 'faker'
+require 'factory_girl_rails'
+Slide.destroy_all
+2.times { Factory(:slide) }

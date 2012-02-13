@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Slide do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @slide = Factory(:slide)
+  end
+
+  it {@slide.should be_valid}
 end
