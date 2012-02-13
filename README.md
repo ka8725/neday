@@ -1,6 +1,6 @@
 # Neday
 This is a social network wich helps to organize sport events. You can
-manage your events, teams, find oppinents and etc.
+manage your events, teams, find opponents and etc.
 
 ##Installation
 - clone repository
@@ -9,4 +9,5 @@ manage your events, teams, find oppinents and etc.
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 - bundle exec rails s
+- bundle exec rake db:seed
 - go to **/admin** to upload slides and configure your site
