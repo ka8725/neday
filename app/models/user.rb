@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :facebook_id,
-                  :remote_avatar_url
+                  :remote_avatar_url, :location_attributes
+  has_one :location, :as => :locationable
+  accepts_nested_attributes_for :location
 
   def name
     "#{first_name} #{last_name}".strip
@@ -19,7 +21,7 @@ class User < ActiveRecord::Base
                :first_name        => data.first_name,
                :last_name         => data.last_name,
                :facebook_id       => auth_data.uid,
-               :remote_avatar_url => data.image)
+               :remote_avatar_url => data.image, :location_attributes => {:address => data.location})
   end
 
   def self.find_for_open_id(access_token, signed_in_resource=nil)

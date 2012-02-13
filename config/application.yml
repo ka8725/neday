@@ -9,6 +9,8 @@ development:
     consumer_key: 'vfeRImKs04QjpvIo8BP2g'
     consumer_secret: 'l8xjPC1uPyppAQ9TSiOr5wHFT7BmTUQ5T0TIhYNY1k'
   file_storage: :file
+  yandex:
+    api_key: AMP9OE8BAAAA1OzcaAIAORTRZkjUzTo7c1OSFZMG3MAvO6YAAAAAAAAAAACn81NB7MEFHXzYbu2SlUjxpV8nGQ==
 
 test:
   fb:
@@ -21,6 +23,9 @@ test:
     consumer_key: 'vfeRImKs04QjpvIo8BP2g'
     consumer_secret: 'l8xjPC1uPyppAQ9TSiOr5wHFT7BmTUQ5T0TIhYNY1k'
   file_storage: :file
+  yandex:
+    api_key: AMP9OE8BAAAA1OzcaAIAORTRZkjUzTo7c1OSFZMG3MAvO6YAAAAAAAAAAACn81NB7MEFHXzYbu2SlUjxpV8nGQ==
+
 
 production:
   fb:
@@ -33,3 +38,9 @@ production:
     consumer_key: 'db8gYNPmMIuNiyy33aiTQ'
     consumer_secret: '5FzVqAAVJ9I26mZ1FYUnx2WGf0yApUzSgtC5Y8aLa8'
   file_storage: :fog
+  yandex:
+    api_key: ABz-OE8BAAAAZuWjWwIA9iau7jfHC1OfDJM4GROyvAnyggUAAAAAAAAAAAD52P9xkc6BYKbQfqFojK_Zo_d67A==
+  s3:
+    backet: neday
+    access_key_id: AKIAISG2NZJDCFCR7QFQ
+    secret_access_key: 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

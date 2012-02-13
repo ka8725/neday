@@ -1,12 +1,11 @@
 source 'http://rubygems.org'
-
 gem 'rails', '~> 3.2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'mysql2'
-
 gem 'json'
+gem 'geocoder'
 gem 'therubyracer'
 gem 'devise'
 gem 'omniauth-facebook'
@@ -16,6 +15,7 @@ gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'google-translate', :require => false
 gem 'fog', :group => 'production'
 gem 'simple-navigation'
 gem 'rails3-generators'

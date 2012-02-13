@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210145006) do
+ActiveRecord::Schema.define(:version => 20120213103029) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -45,6 +45,21 @@ ActiveRecord::Schema.define(:version => 20120210145006) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "locations", :force => true do |t|
+    t.string   "city"
+    t.string   "country"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "locationable_id"
+    t.string   "locationable_type"
+    t.string   "address"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "locations", ["locationable_id"], :name => "index_locations_on_locationable_id"
+  add_index "locations", ["locationable_type"], :name => "index_locations_on_locationable_type"
 
   create_table "slides", :force => true do |t|
     t.string   "file"
