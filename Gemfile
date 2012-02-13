@@ -20,6 +20,9 @@ gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'faker', :group => :production, :require => false
+gem 'factory_girl', :group => :production, :require => false
+gem 'factory_girl_rails', :group => :production, :require => false
 
 # Gems used only for assets and not required
 # in production environments by default.
