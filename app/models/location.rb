@@ -10,13 +10,11 @@ class Location < ActiveRecord::Base
   end
   after_validation :geocode
   belongs_to :locationable, :polymorphic => true
-
-  def show_map(options = {})
-    options.reverse_merge!({:layer => "map", :zoom => 15, :size => '250,250', :lang => 'ru-Ru'})
-    "http://static-maps.yandex.ru/1.x/?key=#{Settings.yandex.api_key}&l=#{options[:layer]}&ll=#{longitude},#{latitude}&z=#{options[:zoom]}&size=#{options[:size]}&pt=#{longitude},#{latitude}"
-  end
+  delegate :name, :to => :locationable, :allow_nil => true
 
   private
+  # Some social networks give translited addresses. So we have to translate them to Russian to get full andress for Yandex.
+  # Note: Yandex works correctly only for addresses on Russian language
   def translated_address
     return unless address
     "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя".split('').any? {|letter| address.include?(letter) } ?

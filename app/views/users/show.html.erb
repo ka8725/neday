@@ -11,15 +11,19 @@
          <div class='span1'><%= link_to 'Редактировать', edit_user_path(@user) %></div>
      </div>
   </header>
+  <hr>
   <section>
     <div class='row'>
-      <div class='span5'>&nbsp;</div>
-      <div class='span5'>
+      <div class='span4'>
+        <strong>Контакты</strong>
+      </div>
+      <div class='span4'>
+        <strong>Место обитания</strong>
         <address>
           <%= @user.address %></br>
           <%= @user.city %></br>
         </address>
-        <%= image_tag current_user.location.show_map %>
+        <%= render_map(@user.location) %>
       </div>
     </div>
   </section>
