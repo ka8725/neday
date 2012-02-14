@@ -11,7 +11,9 @@ development:
   file_storage: :file
   yandex:
     api_key: AMP9OE8BAAAA1OzcaAIAORTRZkjUzTo7c1OSFZMG3MAvO6YAAAAAAAAAAACn81NB7MEFHXzYbu2SlUjxpV8nGQ==
-
+  google:
+    app_id: 232331970718.apps.googleusercontent.com
+    app_secret: YQwUS7ez3gz8uhH9X7LcVmLv
 test:
   fb:
     app_id: '166205056822008'
@@ -25,7 +27,9 @@ test:
   file_storage: :file
   yandex:
     api_key: AMP9OE8BAAAA1OzcaAIAORTRZkjUzTo7c1OSFZMG3MAvO6YAAAAAAAAAAACn81NB7MEFHXzYbu2SlUjxpV8nGQ==
-
+  google:
+    app_id: 232331970718.apps.googleusercontent.com
+    app_secret: YQwUS7ez3gz8uhH9X7LcVmLv
 
 production:
   fb:
@@ -44,3 +48,6 @@ production:
     backet: neday
     access_key_id: AKIAISG2NZJDCFCR7QFQ
     secret_access_key: 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
+  google:
+    app_id: 926147355465.apps.googleusercontent.com
+    app_secret: TW_QW4cu6hK0msjXFi3q80la
