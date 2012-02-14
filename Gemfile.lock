@@ -138,6 +138,7 @@ GEM
       json_pure
       json_pure
       json_pure (>= 1.1.4)
+    gravtastic (3.2.6)
     has_scope (0.5.1)
     hashie (1.2.0)
     highline (1.6.11)
@@ -336,6 +337,7 @@ DEPENDENCIES
   fog
   geocoder
   google-translate
+  gravtastic
   i18n_generators
   inherited_resources!
   jammit-s3

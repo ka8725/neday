@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic :size => 50
   mount_uploader :avatar, AvatarUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
@@ -24,5 +26,9 @@ class User < ActiveRecord::Base
                :last_name         => data.last_name,
                "#{kind}_id"       => auth_data.uid,
                :remote_avatar_url => data.image, :location_attributes => {:address => data.location})
+  end
+
+  def existed_avatar
+    avatar || gravatar_url
   end
 end
