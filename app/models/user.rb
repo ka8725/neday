@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_one :location, :as => :locationable
   accepts_nested_attributes_for :location
 
+  delegate :country, :city, :address, :to => :location, :allow_nil => true
+
   def name
     "#{first_name} #{last_name}".strip
   end

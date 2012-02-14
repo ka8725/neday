@@ -11,6 +11,11 @@ class Location < ActiveRecord::Base
   after_validation :geocode
   belongs_to :locationable, :polymorphic => true
 
+  def show_map(options = {})
+    options.reverse_merge!({:layer => "map", :zoom => 15, :size => '250,250', :lang => 'ru-Ru'})
+    "http://static-maps.yandex.ru/1.x/?key=#{Settings.yandex.api_key}&l=#{options[:layer]}&ll=#{longitude},#{latitude}&z=#{options[:zoom]}&size=#{options[:size]}&pt=#{longitude},#{latitude}"
+  end
+
   private
   def translated_address
     return unless address
