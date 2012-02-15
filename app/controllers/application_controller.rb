@@ -4,9 +4,10 @@ class ApplicationController < ActionController::Base
 
   private
   def authentication_check
-    return if Rails.env.development?
-    authenticate_or_request_with_http_basic do |user, password|
-      user == 'admin' && password == 'neday.org'
+    if Rails.env.production?
+      authenticate_or_request_with_http_basic do |user, password|
+        user == 'admin' && password == 'neday.org'
+      end
     end
   end
 end

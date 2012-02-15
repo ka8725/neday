@@ -3,7 +3,7 @@ set :default_environment, { "PATH" => "/home/ubuntu/.rbenv/versions/1.9.2-p290/b
 set :application, "neday"
 set :deploy_to, "/home/ubuntu/neday"
 set :rails_env, 'production'
-set :branch, 'bootstrap'
+set :branch, 'master'
 server 'neday.org', :web, :app, :db, :primary => true
 set :normalize_asset_timestamps, false
 
