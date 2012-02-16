@@ -8,7 +8,11 @@
        <div class='span6'>
          <h2><%= @user.name %></h2>
        </div>
-         <div class='span1'><%= link_to 'Редактировать', edit_user_path(@user) %></div>
+         <div class='span1'>
+          <% if can? :edit, @user %>
+            <%= link_to 'Редактировать', edit_user_path(@user) %>
+          <% end %>
+         </div>
      </div>
   </header>
   <hr>

@@ -8,3 +8,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+//= require yandex_map
+
+window.map = null;

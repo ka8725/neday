@@ -20,26 +20,39 @@ module ApplicationHelper
     res.html_safe
   end
 
-  def render_map(location)
-    res = ''
-    if location.try(:address)
-      res << javascript_include_tag("http://api-maps.yandex.ru/1.1/index.xml?key=#{Settings.yandex.api_key}").html_safe
-      res << content_tag(:div, nil, :class => 'yandex-map', :style => "width:300px;height:250px").html_safe
-      res << javascript_tag do
-        %Q{
-          YMaps.jQuery(document).ready(function() {
-            var map = new YMaps.Map(YMaps.jQuery('.yandex-map')[0]);
-            var point = new YMaps.GeoPoint(#{location.longitude}, #{location.latitude});
-            map.setCenter(point);
-            map.setZoom(15);
-            var placemark = new YMaps.Placemark(point);
-            placemark.name = '#{location.name}';
-            placemark.description = '#{location.address}';
-            map.addOverlay(placemark);
-          });
-        }.html_safe
-      end
+  def init_yndex_map
+    raise "Yandex map already initialized" if @yandex_map_initialized # It is impossible to initialize map twice
+    res = javascript_tag do
+      %Q{
+        $(document).ready(function() {
+          document.map = new YandexMap(#{Settings.yandex.api_key});
+        });
+      }.html_safe
     end
+    @yandex_map_initialized = true
     res.html_safe
+  end
+
+  def render_map(location)
+    # res = ''
+    # if location.try(:address)
+    #   res << javascript_include_tag("http://api-maps.yandex.ru/1.1/index.xml?key=#{Settings.yandex.api_key}").html_safe
+    #   res << content_tag(:div, nil, :class => 'yandex-map', :style => "width:300px;height:250px").html_safe
+    #   res << javascript_tag do
+    #           %Q{
+    #             YMaps.jQuery(document).ready(function() {
+    #               map = new YMaps.Map(YMaps.jQuery('.yandex-map')[0]);
+    #               var point = new YMaps.GeoPoint(#{location.longitude}, #{location.latitude});
+    #               map.setCenter(point);
+    #               map.setZoom(15);
+    #               var placemark = new YMaps.Placemark(point);
+    #               placemark.name = '#{location.name}';
+    #               placemark.description = '#{location.address}';
+    #               map.addOverlay(placemark);
+    #             });
+    #           }.html_safe
+    #   end
+    # end
+    # res.html_safe
   end
 end
