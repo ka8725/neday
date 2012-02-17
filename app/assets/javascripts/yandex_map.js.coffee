@@ -1,5 +1,5 @@
 class YandexMap
-  constructor: (@key, @zoom = 12, container = 'yandex-map') ->
+  constructor: (@key, @zoom = 10, container = 'yandex-map') ->
     @container = document.getElementsByClassName(container)[0]
     @container = document.getElementsByTagName(container)[0] unless @container
     @container = document.getElementById(container) unless @container
@@ -9,28 +9,26 @@ class YandexMap
   initMap: =>
     @map = new YMaps.Map(@container)
     @setZoom(@zoom)
-    showYandexMapLocation = (error = nil) ->
+    showYandexMapLocation = (error = null) =>
       if YMaps.location
-        @setCenter(YMaps.location)
-        @setMyCurrentLocation(YMaps.location)
+        @setMyCurrentLocation(YMaps.location, 'Мое текущее место положения')
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition(
-        (pos) ->
-          location = pos.coords
-          location.title = 'Я здесь'
-          @setMyCurrentLocation(location)
-        (error) ->
+        (pos) =>
+          @setMyCurrentLocation(pos.coords, 'Мое текущее место положения')
+        (error) =>
           showYandexMapLocation(error)
       )
     else
       showYandexMapLocation()
 
 
-  setMyCurrentLocation: (location) ->
-    location.title = 'Я здесь'
+  setMyCurrentLocation: (location, message = 'Я здесь') ->
+    location.title = message
     @addPointToMap(location, "default#redSmallPoint")
 
   setCenter: (location) ->
+    @isCenterSet = true
     @map.setCenter(@getGeoPoint(location), @zoom)
 
   setZoom: (zoom = 10) ->
@@ -38,6 +36,7 @@ class YandexMap
 
   addPointToMap: (location, style = 'default#lightblueSmallPoint') ->
     @map.addOverlay(@getPlacemark(location, style))
+    @setCenter(location) unless @isCenterSet
 
   getGeoPoint: (location) ->
     new YMaps.GeoPoint(location.longitude, location.latitude)

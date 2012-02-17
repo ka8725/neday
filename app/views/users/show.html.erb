@@ -29,6 +29,7 @@
         </address>
         <div class='yandex-map'></div>
         <%= add_location_to_map(@user.location) %>
+        <%= add_location_to_map(current_user.location) if current_user  %>
       </div>
     </div>
   </section>

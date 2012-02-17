@@ -35,7 +35,7 @@
         <p>&copy; Neday 2012</p>
       </footer>
     </div>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "http://api-maps.yandex.ru/1.1/index.xml?key=#{Settings.yandex.api_key}" %>
     <%= init_yandex_map %>
     <%= yield(:js) %>
