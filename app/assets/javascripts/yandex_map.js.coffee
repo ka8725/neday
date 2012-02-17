@@ -9,9 +9,22 @@ class YandexMap
   initMap: =>
     @map = new YMaps.Map(@container)
     @setZoom(@zoom)
-    if YMaps.location
-      @setCenter(YMaps.location)
-      @setMyCurrentLocation(YMaps.location)
+    showYandexMapLocation = (error = nil) ->
+      if YMaps.location
+        @setCenter(YMaps.location)
+        @setMyCurrentLocation(YMaps.location)
+    if navigator.geolocation
+      navigator.geolocation.getCurrentPosition(
+        (pos) ->
+          location = pos.coords
+          location.title = 'Я здесь'
+          @setMyCurrentLocation(location)
+        (error) ->
+          showYandexMapLocation(error)
+      )
+    else
+      showYandexMapLocation()
+
 
   setMyCurrentLocation: (location) ->
     location.title = 'Я здесь'
