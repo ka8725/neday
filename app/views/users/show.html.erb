@@ -27,7 +27,8 @@
           <%= @user.address %></br>
           <%= @user.city %></br>
         </address>
-        <%= render_map(@user.location) %>
+        <div class='yandex-map'></div>
+        <%= add_location_to_map(@user.location) %>
       </div>
     </div>
   </section>

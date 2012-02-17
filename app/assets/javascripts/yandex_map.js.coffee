@@ -1,15 +1,38 @@
 class YandexMap
-  constructor: (@key, container = '.yandex-map') ->
-    @container = $(container)
-    loadSrc()
+  constructor: (@key, @zoom = 12, container = 'yandex-map') ->
+    @container = document.getElementsByClassName(container)[0]
+    @container = document.getElementsByTagName(container)[0] unless @container
+    @container = document.getElementById(container) unless @container
+    throw 'ElementNotFound' unless @container
+    @initMap()
 
-  loadSrc: ->
-    if @container.length
-      scr = document.createElement('script')
-      src.type = 'text/javascript'
-      src.src = "http://api-maps.yandex.ru/1.1/index.xml?key=#{@key}"
-      src.onload = initMap()
-      @$('body').append(script)
+  initMap: =>
+    @map = new YMaps.Map(@container)
+    @setZoom(@zoom)
+    if YMaps.location
+      @setCenter(YMaps.location)
+      @setMyCurrentLocation(YMaps.location)
 
-  initMap: ->
-    @map = new YMaps.Map(@container[0])
+  setMyCurrentLocation: (location) ->
+    location.title = 'Я здесь'
+    @addPointToMap(location, "default#redSmallPoint")
+
+  setCenter: (location) ->
+    @map.setCenter(@getGeoPoint(location), @zoom)
+
+  setZoom: (zoom = 10) ->
+    @map.setZoom(zoom)
+
+  addPointToMap: (location, style = 'default#lightblueSmallPoint') ->
+    @map.addOverlay(@getPlacemark(location, style))
+
+  getGeoPoint: (location) ->
+    new YMaps.GeoPoint(location.longitude, location.latitude)
+
+  getPlacemark: (location, style) ->
+    placemark = new YMaps.Placemark(@getGeoPoint(location), {style : style, draggable : false, balloonOptions : {mapAutoPan : false}})
+    placemark.name = location.title
+    placemark.description = location.description
+    placemark
+
+window.YandexMap = YandexMap

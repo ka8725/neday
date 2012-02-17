@@ -8,11 +8,11 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     <%= stylesheet_link_tag "application", :media => "all" %>
-    </style>
     <link href="/favicon.ico" rel="shortcut icon">
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
   </head>
   <body>
     <%= render 'shared/header' %>
@@ -36,6 +36,8 @@
       </footer>
     </div>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "http://api-maps.yandex.ru/1.1/index.xml?key=#{Settings.yandex.api_key}" %>
     <%= init_yandex_map %>
+    <%= yield(:js) %>
   </body>
 </html>
