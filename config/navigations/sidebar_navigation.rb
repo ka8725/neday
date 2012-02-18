@@ -51,6 +51,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
 
     if user_signed_in?
+      primary.item :my_profile, 'Моя страница', user_path(current_user)
       primary.item :sign_out, t('devise.form.sign_out'), destroy_user_session_path, :method => :delete
     else
       primary.item :sign_in, t('devise.form.sign_in'), new_session_path(:user)

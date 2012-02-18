@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :facebook_id,
-                  :remote_avatar_url, :vkontakte_id, :location_attributes, :twitter_id, :google_id
+                  :remote_avatar_url, :remove_avatar, :avatar_cache, :vkontakte_id, :location_attributes, :twitter_id, :google_id
   has_one :location, :as => :locationable
   accepts_nested_attributes_for :location
 
@@ -28,7 +28,11 @@ class User < ActiveRecord::Base
                :remote_avatar_url => data.image, :location_attributes => {:address => data.location})
   end
 
+  def uses_gravatar?
+    !avatar.present?
+  end
+
   def existed_avatar
-    avatar || gravatar_url
+    uses_gravatar? ? gravatar_url : avatar
   end
 end

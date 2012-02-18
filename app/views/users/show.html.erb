@@ -25,7 +25,6 @@
         <strong>Место обитания</strong>
         <address>
           <%= @user.address %></br>
-          <%= @user.city %></br>
         </address>
         <div class='yandex-map'></div>
         <%= add_location_to_map(@user.location) %>
