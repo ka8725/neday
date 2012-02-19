@@ -26,13 +26,16 @@
       <div class='row'>
         <div class='span4'>
           <strong>Контакты</strong>
-          <%= f.text_field :email, :placeholder => 'Email' %>
+          <div>
+            <%= f.text_field :email, :placeholder => 'Email' %>
+            <%= f.hint 'Не рекомендуется изменять' %>
+          </div>
         </div>
         <div class='span4'>
           <%= f.simple_fields_for :location do |fl| %>
             <strong>Место обитания</strong>
             <address>
-              <%= fl.text_field :address, :placeholder => 'Адрес' %></br>
+              <%= fl.text_field :address, :placeholder => 'Адрес', :class => 'w290' %></br>
             </address>
           <% end %>
           <div class='yandex-map'></div>

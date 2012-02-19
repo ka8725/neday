@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :facebook_id,
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :facebook_id, :avatar,
                   :remote_avatar_url, :remove_avatar, :avatar_cache, :vkontakte_id, :location_attributes, :twitter_id, :google_id
   has_one :location, :as => :locationable
   accepts_nested_attributes_for :location
