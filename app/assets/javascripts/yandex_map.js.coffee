@@ -9,19 +9,11 @@ class YandexMap
   initMap: =>
     @map = new YMaps.Map(@container)
     @setZoom(@zoom)
-    showYandexMapLocation = (error = null) =>
-      if YMaps.location
-        @setMyCurrentLocation(YMaps.location, 'Мое текущее место положения')
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition(
         (pos) =>
           @setMyCurrentLocation(pos.coords, 'Мое текущее место положения')
-        (error) =>
-          showYandexMapLocation(error)
       )
-    else
-      showYandexMapLocation()
-
 
   setMyCurrentLocation: (location, message = 'Я здесь') ->
     location.title = message

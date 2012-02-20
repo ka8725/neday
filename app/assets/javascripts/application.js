@@ -9,3 +9,4 @@
 //= require twitter/bootstrap
 //= require bootstrap
 //= require yandex_map
+//= require nested_form
