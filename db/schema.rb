@@ -79,11 +79,13 @@ ActiveRecord::Schema.define(:version => 20120220200325) do
   create_table "user_contacts", :force => true do |t|
     t.integer  "contact_type_id"
     t.string   "value"
+    t.integer  "user_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
   add_index "user_contacts", ["contact_type_id"], :name => "index_user_contacts_on_contact_type_id"
+  add_index "user_contacts", ["user_id"], :name => "index_user_contacts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

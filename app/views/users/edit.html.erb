@@ -1,4 +1,4 @@
-<%= simple_form_for @user, :html => { :class => "form-horizontal" } do |f| %>
+<%= simple_nested_form_for @user, :html => { :class => "form-horizontal" } do |f| %>
   <div class='well'>
     <header>
        <div class='row'>
@@ -30,6 +30,14 @@
             <%= f.text_field :email, :placeholder => 'Email' %>
             <%= f.hint 'Не рекомендуется изменять' %>
           </div>
+          <%= f.fields_for :contacts do |fc| %>
+            <label>
+              <%= fc.collection_select :contact_type_id, ContactType.all, :id, :name, {:include_blank => 'Тип контакта'} %>
+              <%= fc.link_to_remove "Удалить" %>
+            </label>
+            <label><%= fc.text_field :value, :placeholder => 'Значение' %></label>
+          <% end %>
+          <p><%= f.link_to_add "Добавить", :contacts %></p>
         </div>
         <div class='span4'>
           <%= f.simple_fields_for :location do |fl| %>

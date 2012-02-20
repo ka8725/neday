@@ -25,7 +25,7 @@ gem 'factory_girl', :group => :production, :require => false
 gem 'factory_girl_rails', :group => :production, :require => false
 gem 'cancan'
 gem 'gravtastic'
-gem 'nested_form'
+gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -22,6 +22,12 @@ GIT
       actionpack (~> 3.0)
       activemodel (~> 3.0)
 
+GIT
+  remote: git://github.com/ryanb/nested_form.git
+  revision: c5fc50abbed106ab8d5e8434f780ff6270c8ff01
+  specs:
+    nested_form (0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -188,7 +194,6 @@ GEM
     multi_json (1.0.4)
     multipart-post (1.1.4)
     mysql2 (0.3.11)
-    nested_form (0.2.0)
     net-http-digest_auth (1.2)
     net-http-persistent (2.5)
     net-scp (1.0.4)
@@ -335,7 +340,7 @@ DEPENDENCIES
   json
   mocha
   mysql2
-  nested_form
+  nested_form!
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-twitter
