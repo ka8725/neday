@@ -11,7 +11,7 @@ gem 'omniauth-vkontakte'
 gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', '2.12.2'
 gem 'google-translate', :require => false
 gem 'fog', :group => 'production'
 gem 'simple-navigation'

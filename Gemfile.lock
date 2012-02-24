@@ -263,7 +263,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     responders (0.6.5)
-    rmagick (2.13.1)
+    rmagick (2.12.2)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -356,7 +356,7 @@ DEPENDENCIES
   omniauth-vkontakte
   rails (~> 3.2.1)
   rails3-generators
-  rmagick
+  rmagick (= 2.12.2)
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
