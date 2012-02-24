@@ -1,0 +1,57 @@
+= simple_nested_form_for @user, :html => { :class => "form-vertical" } do |f|
+  .well
+    header.page-header
+      .row
+        .span2
+          = image_tag @user.existed_avatar, :alt => @user.name, :title => @user.name
+          = f.input :avatar_cache, :as => :hidden
+          = f.label :remove_avatar do
+            - if @user.uses_gravatar?
+               = link_to 'Gravatar', 'http://gravatar.com/emails', :target => :blank
+            - else
+              = f.check_box :remove_avatar
+              | Удалить аватар
+          = f.file_field :avatar
+        .span6
+          = f.text_field :first_name, :placeholder => 'Имя'
+          | &nbsp;
+          = f.text_field :last_name, :placeholder => 'Фамилия'
+
+      .control-group
+        .controls
+          .input-prepend
+            span.add-on
+              .icon-picture
+            = f.text_field :remote_avatar_url, :placeholder => 'http://myavatar.com/avatar.png'
+
+    section.row
+      .span4
+        strong Контакты
+        = f.input :email, :hint => 'Не рекомендуется изменять', :label => false do
+          .input-prepend
+            span.add-on @
+            = f.email_field :email, :placeholder => 'Электронная почта'
+        = f.fields_for :contacts do |fc|
+          = fc.collection_select :contact_type_id, ContactType.all, :id, :name, {:include_blank => 'Тип контакта'}
+          | &nbsp;
+          = fc.link_to_remove "Удалить"
+          = fc.input :value, :label => false do
+            .input-prepend
+              span.add-on
+                .icon-th-list
+              = fc.text_field :value, :placeholder => 'Контакт'
+        = f.link_to_add "Добавить", :contacts
+      .span4
+        = f.simple_fields_for :location do |fl|
+          strong Место обитания
+          = fl.input :address, :label => false do
+            .input-prepend
+              span.add-on
+                .icon-map-marker
+              = fl.text_field :address, :placeholder => 'Адрес'
+        .yandex-map
+        = add_location_to_map(@user.location)
+    .form-actions
+      = link_to 'Сохранить изменения', 'submit', :class => 'btn btn-primary'
+      | &nbsp;
+      = link_to 'Отмена', user_path(@user), :class => 'btn btn-danger'

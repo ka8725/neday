@@ -10,3 +10,4 @@
 //= require bootstrap
 //= require yandex_map
 //= require nested_form
+//= require main

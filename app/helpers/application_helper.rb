@@ -36,7 +36,7 @@ module ApplicationHelper
   end
 
   def add_location_to_map(location)
-    return if location.address.blank?
+    return if !location || location.address.blank?
     content_for :js do
       javascript_tag do
         %Q{
