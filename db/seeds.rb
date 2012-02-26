@@ -12,6 +12,8 @@ require 'factory_girl_rails'
 Slide.destroy_all
 2.times { Factory(:slide) }
 
+UserContact.destroy_all
+
 ContactType.destroy_all
 ContactType.create!(:name => 'Skype', :icon => File.new(File.join(Rails.root, 'spec/images/skype.png')))
 ContactType.create!(:name => 'Мобильный телефон', :icon => File.new(File.join(Rails.root, 'spec/images/mobile_phone.png')))

@@ -1,0 +1,17 @@
+.tab-pane#contacts-tab
+  header
+    h4 Контакты
+  = f.input :email, :hint => 'Не рекомендуется изменять', :label => false do
+    .input-prepend
+      span.add-on @
+      = f.email_field :email, :placeholder => 'Электронная почта'
+  = f.fields_for :contacts do |fc|
+    = fc.collection_select :contact_type_id, ContactType.all, :id, :name, {:include_blank => 'Тип контакта'}
+    | &nbsp;
+    = fc.link_to_remove "Удалить"
+    = fc.input :value, :label => false do
+      .input-prepend
+        span.add-on
+          .icon-th-list
+        = fc.text_field :value, :placeholder => 'Контакт'
+  = f.link_to_add "Добавить", :contacts

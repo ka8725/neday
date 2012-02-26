@@ -7,13 +7,16 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :facebook_id, :avatar,
                   :remote_avatar_url, :remove_avatar, :avatar_cache, :vkontakte_id, :location_attributes, :twitter_id, :google_id,
-                  :contacts_attributes
+                  :contacts_attributes, :user_sports
   has_one :location, :as => :locationable
   accepts_nested_attributes_for :location
 
   delegate :country, :city, :address, :to => :location, :allow_nil => true
   has_many :contacts, :class_name => 'UserContact', :dependent => :destroy
   accepts_nested_attributes_for :contacts
+  has_many :user_sports, :dependent => :destroy
+  accepts_nested_attributes_for :user_sports
+  has_many :sports, :through => :user_sports
 
   def name
     "#{first_name} #{last_name}".strip

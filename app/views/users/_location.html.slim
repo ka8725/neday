@@ -1,0 +1,11 @@
+.tab-pane#location-tab.active
+  header
+    h4 Место обитания
+  = f.simple_fields_for :location do |fl|
+    = fl.input :address, :label => false do
+      .input-prepend
+        span.add-on
+          .icon-map-marker
+        = fl.text_field :address, :placeholder => 'Адрес', :class => 'span5'
+    .yandex-map
+    = add_location_to_map(@user.location)

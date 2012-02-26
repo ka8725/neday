@@ -1,0 +1,19 @@
+.tab-pane#avatar-tab
+  header
+    h4 Текущий аватар
+  = image_tag @user.existed_avatar, :alt => @user.name, :title => @user.name
+  = f.input :avatar_cache, :as => :hidden
+  = f.label :remove_avatar do
+    - if @user.uses_gravatar?
+       = link_to 'Gravatar', 'http://gravatar.com/emails', :target => :blank
+    - else
+      = f.check_box :remove_avatar
+      | Удалить аватар
+  = f.file_field :avatar
+
+  .control-group
+    .controls
+      .input-prepend
+        span.add-on
+          .icon-picture
+        = f.text_field :remote_avatar_url, :placeholder => 'http://myavatar.com/avatar.png'

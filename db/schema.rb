@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225132113) do
+ActiveRecord::Schema.define(:version => 20120225211843) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -93,6 +93,16 @@ ActiveRecord::Schema.define(:version => 20120225132113) do
 
   add_index "user_contacts", ["contact_type_id"], :name => "index_user_contacts_on_contact_type_id"
   add_index "user_contacts", ["user_id"], :name => "index_user_contacts_on_user_id"
+
+  create_table "user_sports", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "sport_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_sports", ["sport_id"], :name => "index_user_sports_on_sport_id"
+  add_index "user_sports", ["user_id"], :name => "index_user_sports_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
