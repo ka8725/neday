@@ -11,12 +11,17 @@
   section.row
     .span4
       strong Контакты
-      dl
+      dl.page-header
         dt Email
         dd= @user.email
         - @user.contacts.each do |c|
           dt= c.contact_type.name
           dd= c.value
+      strong Интересующие виды спорта
+      ul
+        - @user.sports.each do |s|
+          li= s.name
+
     .span4
       strong Место обитания
       address= @user.address
