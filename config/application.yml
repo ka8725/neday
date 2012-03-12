@@ -46,8 +46,8 @@ production:
     api_key: ABz-OE8BAAAAZuWjWwIA9iau7jfHC1OfDJM4GROyvAnyggUAAAAAAAAAAAD52P9xkc6BYKbQfqFojK_Zo_d67A==
   s3:
     backet: neday
-    access_key_id: AKIAISG2NZJDCFCR7QFQ
-    secret_access_key: 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
+    access_key_id: <%= ENV['AWS_KEY'] %>
+    secret_access_key: <%= ENV['AWS_SECRET'] %> 
   google:
     app_id: 926147355465.apps.googleusercontent.com
     app_secret: TW_QW4cu6hK0msjXFi3q80la
