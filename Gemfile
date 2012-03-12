@@ -40,6 +40,7 @@ end
 gem 'jquery-rails'
 
 group :development do
+  gem 'heroku'
   gem 'capistrano'
   gem 'jammit-s3'
 end
