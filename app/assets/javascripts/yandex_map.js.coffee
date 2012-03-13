@@ -23,7 +23,7 @@ class YandexMap
     @isCenterSet = true
     @map.setCenter(@getGeoPoint(location), @zoom)
 
-  setZoom: (zoom = 10) ->
+  setZoom: (zoom) ->
     @map.setZoom(zoom)
 
   addPointToMap: (location, style = 'default#lightblueSmallPoint') ->

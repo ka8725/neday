@@ -8,7 +8,8 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)1321269920noR5SG.jpg
 require 'faker'
-2.times { |i| Slide.create!(:title => Faker::Lorem.name, :description => Faker::Lorem.sentence, :file => File.new(File.join(Rails.root, "spec/images/slide#{i}.jpg"))) }
+Slide.destroy_all
+2.times { |i| Slide.create!(:title => Faker::Name.title, :description => Faker::Lorem.sentence, :file => File.new(File.join(Rails.root, "spec/images/slide#{i}.jpg"))) }
 
 UserContact.destroy_all
 
