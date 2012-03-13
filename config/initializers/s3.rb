@@ -5,5 +5,6 @@ if Rails.env.production?
     config.s3_access_key_id = ENV['AWS_KEY']
     config.s3_secret_access_key = ENV['AWS_SECRET']
     config.s3_bucket = ENV['AWS_BUCKET']
+    config.s3_region =ENV['AWS_REGION']
   end
 end
