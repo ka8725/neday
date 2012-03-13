@@ -41,13 +41,9 @@ production:
   twitter:
     consumer_key: 'db8gYNPmMIuNiyy33aiTQ'
     consumer_secret: '5FzVqAAVJ9I26mZ1FYUnx2WGf0yApUzSgtC5Y8aLa8'
-  file_storage: :fog
+  file_storage: :s3
   yandex:
     api_key: ABz-OE8BAAAAZuWjWwIA9iau7jfHC1OfDJM4GROyvAnyggUAAAAAAAAAAAD52P9xkc6BYKbQfqFojK_Zo_d67A==
-  s3:
-    bucket: neday
-    access_key_id: <%= ENV['AWS_KEY'] %>
-    secret_access_key: <%= ENV['AWS_SECRET'] %>
   google:
     app_id: 926147355465.apps.googleusercontent.com
     app_secret: TW_QW4cu6hK0msjXFi3q80la
