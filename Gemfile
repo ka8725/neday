@@ -30,8 +30,6 @@ end
 
 group :development, :production do
   gem 'faker', :require => false
-  gem 'factory_girl', :require => false
-  gem 'factory_girl_rails', :require => false
 end
 
 # Gems used only for assets and not required
