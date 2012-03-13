@@ -13,20 +13,26 @@ gem 'settingslogic'
 gem 'carrierwave'
 gem 'rmagick', '2.12.2'
 gem 'google-translate', :require => false
-gem 'fog', :group => 'production'
 gem 'simple-navigation'
 gem 'rails3-generators'
 gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
-gem 'faker', :group => :production, :require => false
-gem 'factory_girl', :group => :production, :require => false
-gem 'factory_girl_rails', :group => :production, :require => false
 gem 'cancan'
 gem 'gravtastic'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'slim-rails'
+
+group :production do
+  gem 'fog'
+end
+
+group :development, :production do
+  gem 'faker', :require => false
+  gem 'factory_girl', :require => false
+  gem 'factory_girl_rails', :require => false
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
