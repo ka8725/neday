@@ -15,7 +15,7 @@ gem 'rmagick', '2.12.2'
 gem 'google-translate', :require => false
 gem 'simple-navigation'
 gem 'rails3-generators'
-gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
+# gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
@@ -23,6 +23,7 @@ gem 'cancan'
 gem 'gravtastic'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'slim-rails'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 group :production do
   gem 'fog'
