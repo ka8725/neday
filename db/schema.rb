@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225211843) do
+ActiveRecord::Schema.define(:version => 20120315000347) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -53,6 +53,32 @@ ActiveRecord::Schema.define(:version => 20120225211843) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "event_members", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "event_members", ["event_id"], :name => "index_event_members_on_event_id"
+  add_index "event_members", ["user_id"], :name => "index_event_members_on_user_id"
+
+  create_table "events", :force => true do |t|
+    t.integer  "owner_id"
+    t.integer  "duration"
+    t.datetime "start_at"
+    t.integer  "place_id"
+    t.integer  "sport_id"
+    t.integer  "max_number_members"
+    t.text     "note"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "events", ["owner_id"], :name => "index_events_on_owner_id"
+  add_index "events", ["place_id"], :name => "index_events_on_place_id"
+  add_index "events", ["sport_id"], :name => "index_events_on_sport_id"
+
   create_table "locations", :force => true do |t|
     t.string   "city"
     t.string   "country"
@@ -67,6 +93,15 @@ ActiveRecord::Schema.define(:version => 20120225211843) do
 
   add_index "locations", ["locationable_id"], :name => "index_locations_on_locationable_id"
   add_index "locations", ["locationable_type"], :name => "index_locations_on_locationable_type"
+
+  create_table "places", :force => true do |t|
+    t.string   "name"
+    t.integer  "location_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "places", ["location_id"], :name => "index_places_on_location_id"
 
   create_table "slides", :force => true do |t|
     t.string   "file"
