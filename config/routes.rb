@@ -1,7 +1,10 @@
 Neday::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root :to => "home#index"
-  resources :users
+  resources :users do
+    resources :events
+  end
+  resources :events
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

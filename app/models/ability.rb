@@ -12,6 +12,7 @@ class Ability
     # end
 
     can :manage, User, :id => user.id
+    can :manage, Event
     can :read, :all
     #
     # The first argument to `can` is the action you are giving the user permission to do.

@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
   factory :event do
-      owner_id 1
-      duration 1
-      start_at "2012-03-15 02:37:40"
-      place_id 1
-      sport_id 1
-      max_number_members 1
-      note "MyText"
-    end
+    association :owner, :factory => :user
+    duration 112543
+    start_at 10.days.since
+    association :place
+    association :sport
+    max_number_members {rand(10) + 1}
+    note {Faker::Lorem.sentence}
+  end
 end

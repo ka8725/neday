@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   has_many :user_sports, :dependent => :destroy
   accepts_nested_attributes_for :user_sports
   has_many :sports, :through => :user_sports
+  has_many :events, :foreign_key => 'owner_id'
 
   def name
     "#{first_name} #{last_name}".strip
