@@ -41,7 +41,7 @@ production:
   twitter:
     consumer_key: 'db8gYNPmMIuNiyy33aiTQ'
     consumer_secret: '5FzVqAAVJ9I26mZ1FYUnx2WGf0yApUzSgtC5Y8aLa8'
-  file_storage: :s3
+  file_storage: :fog
   yandex:
     api_key: ABz-OE8BAAAAZuWjWwIA9iau7jfHC1OfDJM4GROyvAnyggUAAAAAAAAAAAD52P9xkc6BYKbQfqFojK_Zo_d67A==
   google:
