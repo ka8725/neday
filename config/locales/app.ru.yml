@@ -1,4 +1,13 @@
 ru:
+  home: 'Главная'
+  connect: 'Присоединиться'
+  navbar:
+    home: 'Главная'
+    opponents: 'Оппоненты'
+    teams: 'Команды'
+    tournaments: 'Турниры'
+    events: 'События'
+
   devise:
     form:
       sign_in: 'Войти'

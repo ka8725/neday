@@ -25,6 +25,7 @@ gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'slim-rails'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'fog'
+gem 'get_or_build'
 
 group :development, :production do
   gem 'faker', :require => false

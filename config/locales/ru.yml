@@ -1,12 +1,4 @@
 ru:
-  home: 'Главная'
-  connect: 'Присоединиться'
-  navbar:
-    home: 'Главная'
-    opponents: 'Оппоненты'
-    teams: 'Команды'
-    tournaments: 'Турниры'
-
   date:
     abbr_day_names:
     - Вс
