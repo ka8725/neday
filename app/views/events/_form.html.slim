@@ -5,9 +5,9 @@
     = f.input :duration
     = f.input :start_at
     = f.association :sport
-    = f.simple_fields_for :place, f.object.place_or_build do |fp|
+    = f.simple_fields_for :place, :build_association => true do |fp|
       = fp.input :name
-      = fp.simple_fields_for :location, fp.object.location_or_build do |fl|
+      = fp.simple_fields_for :location, :build_association => true do |fl|
         = fl.input :address
     = f.input :max_number_members
     = f.input :note
