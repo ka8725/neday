@@ -37,6 +37,8 @@
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "http://api-maps.yandex.ru/1.1/index.xml?key=#{Settings.yandex.api_key}" %>
+    <script type="text/javascript" src="http://use.typekit.com/twa8wdc.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <%= init_yandex_map %>
     <%= yield(:js) %>
   </body>

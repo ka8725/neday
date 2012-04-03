@@ -318,7 +318,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   devise
-  factory_girl
   factory_girl_rails
   faker
   fog
@@ -342,7 +341,6 @@ DEPENDENCIES
   rails (~> 3.2.2)
   rails3-generators
   rmagick
-  rspec
   rspec-rails
   sass-rails (~> 3.2.3)
   settingslogic
