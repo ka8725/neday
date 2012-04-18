@@ -1,0 +1,8 @@
+<div class="tab-pane" id="sport-tab">
+  <header><h4>Интересующие виды спорта</h4></header>
+  <%= f.fields_for :user_sports do |fs| %>
+    <%= fs.collection_select :sport_id, Sport.all, :id, :name, {:include_blank => 'Вид спорта'} %>
+    <%= fs.link_to_remove "Удалить" %>
+  <% end %>
+  <%= f.link_to_add "Добавить", :user_sports %>
+</div>

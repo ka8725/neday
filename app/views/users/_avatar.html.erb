@@ -1,0 +1,24 @@
+<div class="tab-pane" id="avatar-tab">
+  <header><h4>Текущий аватар</h4></header>
+  <%= image_tag @user.existed_avatar, :alt => @user.name, :title => @user.name %>
+  <%= f.input :avatar_cache, :as => :hidden %>
+  <%= f.label :remove_avatar do %>
+    <% if @user.uses_gravatar? %>
+      <%= link_to 'Gravatar', 'http://gravatar.com/emails', :target => :blank %>
+    <% else %>
+      <%= f.check_box :remove_avatar %>
+      Удалить аватар
+    <% end %>
+  <% end %>
+  <%= f.file_field :avatar %>
+  <div class="control-group">
+    <div class="controls">
+      <div class="input-prepend">
+        <span class="add-on">
+          <div class="icon-picture"></div>
+          <%= f.text_field :remote_avatar_url, :placeholder => 'http://myavatar.com/avatar.png' %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="well">
+  <header class="page-header">
+    <div class="row">
+      <div class="span1">
+        <%= image_tag @user.existed_avatar, :alt => @user.name, :title => @user.name  %>
+      </div>
+      <div class="span6">
+        <h2><%= @user.name  %></h2>
+      </div>
+      <div class="span1">
+        <% if can? :edit, (@user) %>
+          <%= link_to 'Редактировать', edit_user_path(@user)%>
+        <% end %>
+      </div>
+    </div>
+    <section class="row">
+      <div class="span4">
+        <strong>Контакты</strong>
+        <dl class="page-header">
+          <dt>Email</dt>
+          <dd><%= @user.email  %></dd>
+            <% @user.contacts.each do |c| %>
+              <dt><%= c.contact_type.name %></dt>
+              <dd><%= c.value %></dd>
+            <% end %>
+        </dl>
+        <strong>Контакты</strong>
+        <dl class="page-header">
+          <dt>Email</dt>
+          <dd><%= @user.email %></dd>
+          <% @user.contacts.each do |c| %>
+            <dt><%= c.contact_type.name %></dt>
+            <dd><%= c.value %></dd>
+          <% end %>
+        </dl>
+        <strong>Интересующие виды спорта</strong>
+        <ul>
+          <% @user.sports.each do |s| %>
+            <li><%= s.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="span4">
+        <strong>Место обитания</strong>
+        <address><%= @user.address %></address>
+        <div class="yandex-map">
+          <%= add_location_to_map(@user.location) %>
+          <%= add_location_to_map(current_user.try(:location)) %>
+        </div>
+      </div>
+    </section>
+  </header>
+</div>

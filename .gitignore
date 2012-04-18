@@ -10,4 +10,5 @@ tmtags
 public/uploads
 public/assets
 !/public/assets/manifest.yml
-
+.idea/**
+*~
