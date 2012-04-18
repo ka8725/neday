@@ -233,8 +233,6 @@ GEM
       activesupport (= 3.2.2)
       bundler (~> 1.0)
       railties (= 3.2.2)
-    rails3-generators (0.17.4)
-      railties (>= 3.0.0)
     railties (3.2.2)
       actionpack (= 3.2.2)
       activesupport (= 3.2.2)
@@ -339,7 +337,6 @@ DEPENDENCIES
   omniauth-twitter
   omniauth-vkontakte
   rails (~> 3.2.2)
-  rails3-generators
   rmagick
   rspec-rails
   sass-rails (~> 3.2.3)
@@ -348,6 +345,5 @@ DEPENDENCIES
   simple_form!
   slim-rails
   sqlite3
-  therubyracer
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
