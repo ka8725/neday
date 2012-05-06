@@ -1,0 +1,22 @@
+<div class="tab-pane" id="contacts-tab">
+  <header><h4>Контакты</h4></header>
+  <%= f.input :email, :hint => 'Не рекомендуется изменять', :label => false do %>
+    <div class="input-prepend">
+      <span class="add-on"> @ </span>
+      <%= f.email_field :email, :placeholder => 'Электронная почта' %>
+    </div>
+  <% end %>
+  <%= f.fields_for :contacts do |fc| %>
+    <%= fc.collection_select :contact_type_id, ContactType.all, :id, :name, {:include_blank => 'Тип контакта'} %>
+    <%= fc.link_to_remove "Удалить" %>
+    <%= fc.input :value, :label => false do %>
+      <div class="input-prepend">
+        <span class="add-on">
+          <div class="icon-th-list"></div>
+        </span>
+        <%= fc.text_field :value, :placeholder => 'Контакт' %>
+      </div>
+    <% end %>  
+  <% end %>
+  <%= f.link_to_add "Добавить", :contacts %>
+</div>
