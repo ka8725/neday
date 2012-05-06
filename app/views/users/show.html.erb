@@ -18,7 +18,7 @@
         <strong>Контакты</strong>
         <dl class="page-header">
           <dt>Email</dt>
-          <dd><%= @user.email  %></dd>
+          <dd><%= @user.email %></dd>
             <% @user.contacts.each do |c| %>
               <dt><%= c.contact_type.name %></dt>
               <dd><%= c.value %></dd>

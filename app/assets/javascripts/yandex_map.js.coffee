@@ -9,15 +9,17 @@ class YandexMap
   initMap: =>
     @map = new YMaps.Map(@container)
     @setZoom(@zoom)
-    if navigator.geolocation
-      navigator.geolocation.getCurrentPosition(
-        (pos) =>
-          @setMyCurrentLocation(pos.coords, 'Мое текущее место положения')
-      )
-
-  setMyCurrentLocation: (location, message = 'Я здесь') ->
-    location.title = message
-    @addPointToMap(location, "default#redSmallPoint")
+  # Geolocation cleaned up temporary. TODO: use geolocation by IP.
+  # It won't show confirm message to ask user allow using geolocation
+  #   if navigator.geolocation
+  #     navigator.geolocation.getCurrentPosition(
+  #       (pos) =>
+  #         @setMyCurrentLocation(pos.coords, 'Мое текущее место положения')
+  #     )
+  #
+  # setMyCurrentLocation: (location, message = 'Я здесь') ->
+  #   location.title = message
+  #   @addPointToMap(location, "default#redSmallPoint")
 
   setCenter: (location) ->
     @isCenterSet = true

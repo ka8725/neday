@@ -1,10 +1,8 @@
 module ApplicationHelper
+  FLASH_TYPES = {:notice => 'info', :error => 'error', :alert => 'warning'}.freeze
+
   def flash_class(level)
-    case level
-      when :notice then 'info'
-      when :error then 'error'
-      when :alert then 'warning'
-    end
+    FLASH_TYPES[level]
   end
 
   def flash_messages
