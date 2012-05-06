@@ -1,9 +1,0 @@
-.tab-pane#sport-tab
-  header
-    h4 Интересующие виды спорта
-  = f.fields_for :user_sports do |fs|
-    = fs.collection_select :sport_id, Sport.all, :id, :name, {:include_blank => 'Вид спорта'}
-    | &nbsp;
-    = fs.link_to_remove "Удалить"
-
-  = f.link_to_add "Добавить", :user_sports

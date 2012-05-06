@@ -1,0 +1,26 @@
+<%=  simple_nested_form_for @user, :html => { :class => "form-vertical" } do |f| %>
+  <div class="well">
+    <header>
+      <%= f.text_field :first_name, :placeholder => 'Имя' %>
+      <%= f.text_field :last_name, :placeholder => 'Фамилия' %>
+    </header>
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active"><%=link_to 'Адрес', '#location-tab', :data => {:toggle => 'tab'}, :class => 'active' %></li>
+        <li><%=link_to 'Аватар', '#avatar-tab', :data => {:toggle => 'tab'}  %></li>
+        <li><%=link_to 'Контакты', '#contacts-tab', :data => {:toggle => 'tab'}  %></li>
+        <li><%=link_to 'Виды спорта', '#sport-tab', :data => {:toggle => 'tab'}  %></li>
+       </ul>
+      <div class="tab-content">
+        <%= render :partial => 'contacts', :locals => {:f => f}  %>
+        <%= render :partial => 'location', :locals => {:f => f}  %>
+        <%= render :partial => 'sport', :locals => {:f => f}  %>
+        <%= render :partial => 'avatar', :locals => {:f => f}  %>
+      </div>
+      <div class="form-action">
+        <%= link_to 'Сохранить изменения', 'submit', :class => 'btn btn-primary' %>
+        <%=link_to 'Отмена', user_path(@user), :class => 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<%= simple_form_for @event, :html => { :class => "form-vertical" } do |f| %>
+  <div class="well">
+    <div class="page-header"><h1>Событие</h1></div>
+    <%= f.input :duration %>
+    <%= f.input :start_at %>
+    <%= f.association :sport %>
+    <%= f.simple_fields_for :place, :build_association => true do |fp| %>
+      <%= fp.input :name %>
+      <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
+        <%= fl.input :address %>
+      <% end %>
+    <% end %>
+    <%= f.input :max_number_members %>
+    <%= f.input :note  %>
+    <div class="form-action">
+      <%= link_to 'Сохранить', 'submit', :class => 'btn btn-primary' %>
+      <%= link_to 'Отмена', user_path(current_user), :class => 'btn btn-danger' %>
+    </div>
+  </div>
+<% end %>
