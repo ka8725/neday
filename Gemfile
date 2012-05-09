@@ -42,6 +42,8 @@ gem 'jquery-rails'
 group :development do
   gem 'heroku'
   # gem 'capistrano'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
   gem 'jammit-s3'
 end
 
@@ -49,6 +51,8 @@ group :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'faker'
   gem 'mocha'
 end
