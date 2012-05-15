@@ -1,19 +1,26 @@
-<%= simple_form_for @event, :html => { :class => "form-vertical" } do |f| %>
+<%= simple_form_for @event, :html => { :class => "form-horizontal" } do |f| %>
   <div class="well">
-    <div class="page-header"><h1>Событие</h1></div>
-    <%= f.input :duration %>
-    <%= f.input :start_at %>
+    <div class="page-header"><h1>Создание нового</h1></div>
     <%= f.association :sport %>
-    <%= f.simple_fields_for :place, :build_association => true do |fp| %>
-      <%= fp.input :name %>
-      <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
-        <%= fl.input :address %>
+    <%= f.input :max_number_members %>
+    <%= f.input :venue do %>
+      <%= f.simple_fields_for :place, :build_association => true do |fp| %>
+        <%= fp.label :name %>
+        <%= fp.text_field :name %>
+        <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
+         <%= fp.label :address %>
+         <%= fl.text_field :address %>
+        <% end %>
       <% end %>
     <% end %>
-    <%= f.input :max_number_members %>
-    <%= f.input :note  %>
+    <%= f.input :time do %>
+      <%= f.label :start_at %>
+      <%= f.text_field :start_at %>
+      <%= f.label :duration %>
+      <%= f.text_field :duration %>
+    <% end %>
     <div class="form-actions">
-      <%= link_to 'Сохранить', 'submit', :class => 'btn btn-primary' %>
+      <%= link_to 'Создать', 'submit', :class => 'btn btn-primary' %>
       <%= link_to 'Отмена', user_path(current_user), :class => 'btn btn-danger' %>
     </div>
   </div>

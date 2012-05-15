@@ -374,6 +374,5 @@ DEPENDENCIES
   simple-navigation
   simple_form!
   sqlite3
-  therubyracer
-  twitter-bootstrap-rails (= 2.0.7)
+  twitter-bootstrap-rails (~> 2.0.7)
   uglifier (>= 1.0.3)
