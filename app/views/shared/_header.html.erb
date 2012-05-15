@@ -1,13 +1,13 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="btn btn-navbar" data-target='nav-collapse' data-toggle='collapse'>
+      <a class="btn btn-navbar" data-target='.nav-collapse' data-toggle='collapse'>
         <span class="i-bar"></span>
         <span class="i-bar"></span>
         <span class="i-bar"></span>
       </a>
       <%= link_to 'Neday', root_path, :class => 'brand' %>
-      <div class="container nav-collapse">
+      <div class="nav-collapse">
         <%= render_navigation :context => :main %>
         <p class="navbar-text pull-right">
           <% if user_signed_in? %>
