@@ -9,4 +9,6 @@ class Location < ActiveRecord::Base
   after_validation :geocode
   belongs_to :locationable, :polymorphic => true
   delegate :name, :to => :locationable, :allow_nil => true
+
+  validates :address, :presence => true
 end

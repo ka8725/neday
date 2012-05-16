@@ -21,3 +21,12 @@ ru:
       user:
         password: 'Пароль'
         password_confirmation: 'Проверочный пароль'
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} - создано успешно"
+      update:
+        notice: "%{resource_name} - обновлено успешно"
+      destroy:
+        notice: "%{resource_name} - удалено успешно"
+        alert: "%{resource_name} - нельзя удалить"

@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+gem 'jquery-rails'
 gem 'rails', '~> 3.2.2'
 gem 'mysql2'
 gem 'json'
@@ -19,7 +20,6 @@ gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'cancan'
 gem 'gravtastic'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
-# gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'fog'
 gem 'get_or_build'
 
@@ -36,21 +36,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
 group :development do
   gem 'heroku'
-  # gem 'capistrano'
-  gem 'guard-cucumber'
   gem 'guard-rspec'
   gem 'jammit-s3'
 end
 
 group :test do
+  gem "shoulda-matchers"
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'faker'
   gem 'mocha'

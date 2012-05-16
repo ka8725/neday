@@ -14,6 +14,20 @@ RSpec.configure do |config|
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
   config.mock_with :mocha
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
   # config.mock_with :flexmock
   # config.mock_with :rr
 

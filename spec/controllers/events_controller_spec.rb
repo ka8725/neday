@@ -5,4 +5,14 @@ describe EventsController do
     get :new
     response.should be_true
   }
+
+  context 'persisted' do
+    let(:event) { FactoryGirl.create(:event) }
+    before(:each) { event }
+
+    it {
+      get :show, :id => event.id
+      response.should be_success
+    }
+  end
 end

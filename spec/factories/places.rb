@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :place do
-      name "MyString"
-      location_id 1
-    end
+    name "MyString"
+    location_id 1
+  end
 end
