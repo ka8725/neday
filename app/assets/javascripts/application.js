@@ -10,3 +10,4 @@
 //= require yandex_map
 //= require nested_form
 //= require main
+//= require bootstrap-datepicker
