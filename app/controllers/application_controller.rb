@@ -1,4 +1,10 @@
+require "app_responder"
+
 class ApplicationController < ActionController::Base
+  self.responder = AppResponder
+  respond_to :html
+  responders :flash, :http_cache
+
   protect_from_forgery
   before_filter :authentication_check
 

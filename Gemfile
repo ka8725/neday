@@ -11,9 +11,8 @@ gem 'omniauth-twitter'
 gem 'settingslogic'
 gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
 gem 'rmagick'
-gem 'google-translate', :require => false
 gem 'simple-navigation'
-gem 'inherited_resources'
+gem 'responders'
 gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
