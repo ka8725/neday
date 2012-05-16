@@ -4,20 +4,24 @@
     <%= f.association :sport %>
     <%= f.input :max_number_members %>
     <%= f.input :venue do %>
-      <%= f.simple_fields_for :place, :build_association => true do |fp| %>
-        <%= fp.label :name %>
-        <%= fp.text_field :name %>
-        <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
-         <%= fp.label :address %>
-         <%= fl.text_field :address %>
+      <div class="form-inline">
+        <%= f.simple_fields_for :place, :build_association => true do |fp| %>
+          <%= fp.label :name %>
+          <%= fp.text_field :name %>
+          <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
+           <%= fp.label :address %>
+           <%= fl.text_field :address %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     <% end %>
     <%= f.input :time do %>
-      <%= f.label :start_at %>
-      <%= f.text_field :start_at %>
-      <%= f.label :duration %>
-      <%= f.text_field :duration %>
+      <div class="form-inline">
+        <%= f.label :start_at %>
+        <%= f.text_field :start_at, :class=> 'datepicker' %>
+        <%= f.label :duration %>
+        <%= f.text_field :duration %>
+      </div>
     <% end %>
     <div class="form-actions">
       <%= link_to 'Создать', 'submit', :class => 'btn btn-primary' %>
