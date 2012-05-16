@@ -8,6 +8,5 @@ FactoryGirl.define do
     association :place
     association :sport
     max_number_members {rand(10) + 1}
-    note {Faker::Lorem.sentence}
   end
 end
