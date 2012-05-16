@@ -22,6 +22,7 @@ gem 'gravtastic'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'fog'
 gem 'get_or_build'
+gem 'inherited_resources'
 
 group :development, :production do
   gem 'faker', :require => false

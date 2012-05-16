@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe Slide do
-  before(:each) do
-    @slide = Factory(:slide)
-  end
+  let(:slide) { FactoryGirl.create(:slide) }
 
-  it {@slide.should be_valid}
+  context :factory do
+    it { slide.should be_valid }
+    it { slide.should be_persisted }
+  end
 end
