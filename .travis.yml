@@ -3,7 +3,8 @@ rvm:
   - 1.9.2
 before_script:
   - "cp config/database.example.yml config/database.yml"
-script:
+  - mysql -e 'create database neday_test;'
   - "RAILS_ENV=test bundle exec rake db:schema:load"
+script:
   - "bundle exec rspec"
 

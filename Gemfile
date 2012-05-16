@@ -45,7 +45,6 @@ end
 
 group :test do
   gem "shoulda-matchers"
-  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
