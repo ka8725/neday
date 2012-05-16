@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315000347) do
+ActiveRecord::Schema.define(:version => 20120516120503) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "name"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(:version => 20120315000347) do
     t.integer  "place_id"
     t.integer  "sport_id"
     t.integer  "max_number_members"
-    t.text     "note"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
