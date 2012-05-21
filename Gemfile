@@ -23,6 +23,7 @@ gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'fog'
 gem 'get_or_build'
 gem 'inherited_resources'
+gem 'will_paginate'
 
 group :development, :production do
   gem 'faker', :require => false
@@ -41,6 +42,7 @@ group :development do
   gem 'heroku'
   gem 'guard-rspec'
   gem 'jammit-s3'
+  gem 'sqlite3'
 end
 
 group :test do

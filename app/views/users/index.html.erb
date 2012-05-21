@@ -1,0 +1,23 @@
+<h1>Список оппонентов</h1>
+<%= will_paginate %>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <table>
+        <tr>
+          <td rowspan="2">
+            <%= image_tag user.existed_avatar, :alt => user.name, :title => user.name %>
+          </td>
+          <th><%= link_to user.name, user %></th>
+          <td rowspan="2"><%= user.user_sports %></td>
+        </tr>
+        <tr>
+          <th>
+            <%= link_to user.email, user %>
+          </th>
+        </tr>
+      </table>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>
