@@ -1,20 +1,33 @@
 <h1>Список оппонентов</h1>
 <%= will_paginate %>
-<ul>
+<ul class="unstyled">
   <% @users.each do |user| %>
     <li>
-      <table>
+      <table class="table table-bordered table-condensed">
         <tr>
-          <td rowspan="2">
-            <%= image_tag user.existed_avatar, :alt => user.name, :title => user.name %>
+          <td>
+            <%= link_to user do %>
+              <%= image_tag user.existed_avatar, :alt => user.name, :title => user.name %>
+            <% end %>
           </td>
-          <th><%= link_to user.name, user %></th>
-          <td rowspan="2"><%= user.user_sports %></td>
-        </tr>
-        <tr>
-          <th>
-            <%= link_to user.email, user %>
-          </th>
+          <td>
+            <li>
+              <%= link_to user.name, user %>
+            </li>
+            <li>
+              <%= mail_to user.email %>
+            </li>
+          </td>
+          <td>
+            <% user.sports.each do |sport| %>
+              <li>
+                <%= sport.name %>
+              </li>
+            <% end %>
+          </td>
+          <td>
+            <%= user.address %>
+          </td>
         </tr>
       </table>
     </li>
