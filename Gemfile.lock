@@ -294,6 +294,7 @@ GEM
     warden (1.1.1)
       rack (>= 1.0)
     webrobots (0.0.13)
+    will_paginate (3.0.3)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
@@ -339,3 +340,4 @@ DEPENDENCIES
   sqlite3
   twitter-bootstrap-rails (~> 2.0.7)
   uglifier (>= 1.0.3)
+  will_paginate
