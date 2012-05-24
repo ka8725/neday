@@ -23,7 +23,7 @@ gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'fog'
 gem 'get_or_build'
 gem 'inherited_resources'
-gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :production do
   gem 'faker', :require => false
