@@ -30,4 +30,10 @@ ContactType.create!(:name => 'Jabber', :icon => File.new(File.join(Rails.root, '
     Sport.create!(:name => i, :season => 'Зимние виды спорта')
   end
 
-60.times { User.create! :first_name => Faker::Name.first_name, :last_name => Faker::Name.last_name, :email => Faker::Internet.email, :password => 'password123', :password_confirmation => 'password123', :location => Location.new(:address => Faker::Address.street_address), :sports => [Sport.find(rand(Sport.count)+1), Sport.find(rand(Sport.count)+1)] }
+60.times { User.create! :first_name => Faker::Name.first_name,
+                        :last_name => Faker::Name.last_name,
+                        :email => Faker::Internet.email,
+                        :password => 'password123',
+                        :password_confirmation => 'password123',
+                        :location => Location.new(:address => Faker::Address.street_address),
+                        :sport_ids => Sport.all.map(&:id).shuffle[0...5] }
