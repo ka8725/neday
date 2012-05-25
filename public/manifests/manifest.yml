@@ -1,11 +1,16 @@
 ---
-bg.png: bg-6da8ed5e6cf38b37495cb7944ddb1b7f.png
-check.png: check-0ea14d6e4419f3632b81301f9a0cde6f.png
-facebook.png: facebook-b220c43a7e1372e425a448e9f43e737d.png
-google.png: google-7d63ef3dd02de2211fd7709f8aeaadc2.png
-twitter.png: twitter-ee5277c9c98e0ca141d075053cb672e6.png
-vkontakte.png: vkontakte-2eea8da60a1cb4359b9cc12ffe749105.png
-application.js: application-1501bb2a52fea173b2c54a8ade457ee6.js
-application.css: application-51960a5aa92bda7360cdd6eed47da961.css
-twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-4fbb6a0b9b4e61912f486ac494a858f1.png
-twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.png
+bg.png: bg-42a2af6f179890ae2fccfd67e259099a.png
+check.png: check-e81e3def2dae36192c7aefd671a9f497.png
+facebook.png: facebook-c48e299403fa7f25e1f011a07bc56701.png
+google.png: google-2cee9e70ad17fef6c86c4375fcf6689f.png
+twitter.png: twitter-cc8b14bde4726efa3f5c290f09b1ddef.png
+vkontakte.png: vkontakte-dc6c3ab491a380ee4ffe042b256bf8b5.png
+application.js: application-065712d18784dd1a98b86e24e1497991.js
+application.css: application-a7a652fe311c6a4376785ee867954ac2.css
+fontawesome-webfont.eot: fontawesome-webfont-4e8a0fef19937d0b97a3210a35fbfe0d.eot
+fontawesome-webfont.svg: fontawesome-webfont-20c9c5850d0e36c10574c9bd7225bed9.svg
+fontawesome-webfont.svgz: fontawesome-webfont-347222e8281e757082f8c97172fb7bef.svgz
+fontawesome-webfont.ttf: fontawesome-webfont-ea7524141a8a91bdd7d3b1decee250ce.ttf
+fontawesome-webfont.woff: fontawesome-webfont-005a48840efd62d3930aa7c5f761c438.woff
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png
