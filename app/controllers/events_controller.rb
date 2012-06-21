@@ -5,8 +5,4 @@ class EventsController < InheritedResources::Base
     @events = Event.paginate(:page => params[:page])
   end
 
-  def participate_in_the_event
-    
-  end
-
 end
