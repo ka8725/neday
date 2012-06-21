@@ -1,0 +1,28 @@
+<div class='well'>
+  <div class="page-header"><h1>Список событий</h1></div>
+  <ul class="unstyled">
+    <% @events.each do |event| %>
+      <li class=''>
+        <div class="row">
+          <div class="span1">
+            <%= image_tag(event.sport.icon, :alt => event.sport.name, :title => event.sport.name) %>
+          </div>
+          <div class="span3">
+            <p><%= event.place.name %></p>
+            <p><%= event.start_at %></p>
+          </div>
+          <div class="span3">
+            <p>Вакантных мест: <%= event.max_number_members-event.event_members.count %></p>
+            <%= link_to "Детально", event %>
+          </div>
+          <div class="span1">
+            <div class="btn-group">
+              <button class="btn">Буду участвовать</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= will_paginate %>
+</div>
