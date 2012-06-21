@@ -6,4 +6,7 @@ class Event < ActiveRecord::Base
 
   validates :place, :sport, :start_at, :duration, :presence => true
   accepts_nested_attributes_for :place
+  
+  has_many :event_members
+  has_many :members, :through => :event_members
 end

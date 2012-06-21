@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516120503) do
+ActiveRecord::Schema.define(:version => 20120620124610) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "name"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20120516120503) do
     t.string   "season"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "icon"
   end
 
   create_table "user_contacts", :force => true do |t|
