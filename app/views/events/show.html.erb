@@ -1,0 +1,29 @@
+<div class="well">
+  <header class="page-header">
+    <h2>Событие</h2>
+  </header>
+  <div class="row">
+    <div class="span6">
+      <div class="row">
+        <div class="span1">
+          <%= image_tag @event.sport.icon %>
+        </div>
+        <div class="span3">
+          <ul class="unstyled">
+            <li><%= link_to @event.sport.name %></li>
+            <li><%= @event.start_at %></li>
+            <li><%= @event.start_at.strftime('%A') %></li>
+            <li>
+              <div class="datepicker" id="dp3" data-date="<%= @event.start_at %>" data-date-format="yyyy-dd-mm">
+                <input class="span2" size="16" type="text" value="<%= @event.start_at %>">
+                <span class="add-on"><i class="icon-th"></i></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+    </div>
+  </div>
+</div>
