@@ -4,26 +4,38 @@
   </header>
   <div class="row">
     <div class="span6">
-      <div class="row">
-        <div class="span1">
-          <%= image_tag @event.sport.icon %>
+      <div>
+        <div class="row">
+          <div class="span1"><%= image_tag @event.sport.icon %></div>
+          <div class="span3">
+            <ul class="unstyled">
+              <li><%= link_to @event.sport.name %></li>
+              <li><%= @event.start_at %></li>
+              <li><%= @event.start_at.strftime('%A') %></li>
+              <li>
+                <div class="datepicker" id="dp3" data-date="<%= @event.start_at %>" data-date-format="yyyy-dd-mm">
+                  <input class="span2" size="16" type="text" value="<%= @event.start_at %>">
+                  <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="span3">
+        <div class="span6">
           <ul class="unstyled">
-            <li><%= link_to @event.sport.name %></li>
-            <li><%= @event.start_at %></li>
-            <li><%= @event.start_at.strftime('%A') %></li>
-            <li>
-              <div class="datepicker" id="dp3" data-date="<%= @event.start_at %>" data-date-format="yyyy-dd-mm">
-                <input class="span2" size="16" type="text" value="<%= @event.start_at %>">
-                <span class="add-on"><i class="icon-th"></i></span>
-              </div>
-            </li>
+            <li>Длительность (в часах):<%= @event.duration %></li>
+            <li>Будет участвовать:<%= @event.members.count %></li>
+            <li>Необходимое количество участноков:<%= @event.max_number_members %></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="span6">
+    <div class="span2">
+      <p>Осталось времени:</p>
+      <p><%= time_to_event(@event) %></p>
+      <p>Необходимо человек:</p>
+      <p><%= required_members(@event) %></p>
+      <p><%= @event.place.name %></p>
     </div>
   </div>
 </div>

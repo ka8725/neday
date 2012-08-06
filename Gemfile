@@ -24,6 +24,8 @@ gem 'fog'
 gem 'get_or_build'
 gem 'inherited_resources'
 gem 'bootstrap-will_paginate'
+gem 'rb-readline'
+gem "time_diff"
 
 group :development, :production do
   gem 'faker', :require => false
