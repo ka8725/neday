@@ -5,7 +5,8 @@ Neday::Application.routes.draw do
     resources :events
   end
   resources :events
-
+  resources :event_members, :only => [:create, :destroy]
+  
   # mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   # The priority is based upon order of creation:

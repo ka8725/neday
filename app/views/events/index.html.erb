@@ -12,14 +12,10 @@
             <p><%= event.start_at %></p>
           </div>
           <div class="span3">
-            <p>Вакантных мест: <%= event.max_number_members-event.event_members.count %></p>
+            <p>Вакантных мест: <%= event.max_number_members - event.members.count %></p>
             <%= link_to "Детально", event %>
           </div>
-          <div class="span1">
-            <div class="btn-group">
-              <button class="btn">Буду участвовать</button>
-            </div>
-          </div>
+          <%= render :partial => 'add_remove_eventmember_button', :locals => {:event => event} %>
         </div>
       </li>
     <% end %>
