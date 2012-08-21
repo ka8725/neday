@@ -3,7 +3,7 @@
     <h2>Событие</h2>
   </header>
   <div class="row">
-    <div class="span6">
+    <div class="span4">
       <div>
         <div class="row">
           <div class="span1"><%= image_tag @event.sport.icon %></div>
@@ -25,17 +25,20 @@
           <ul class="unstyled">
             <li>Длительность (в часах):<%= @event.duration %></li>
             <li>Будет участвовать:<%= @event.members.count %></li>
-            <li>Необходимое количество участноков:<%= @event.max_number_members %></li>
+            <li>Необходимо участноков:<%= @event.max_number_members %></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="span2">
+    <div class="span4">
       <p>Осталось времени:</p>
-      <p><%= time_to_event(@event) %></p>
+      <p><%= time_before_event(@event) %></p>
       <p>Необходимо человек:</p>
       <p><%= required_members(@event) %></p>
       <p><%= @event.place.name %></p>
+      <div class="yandex-map">
+      </div>
+      <%= render :partial => 'add_remove_eventmember_button', :locals => {:event => @event} %>
     </div>
   </div>
 </div>
