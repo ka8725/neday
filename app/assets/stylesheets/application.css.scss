@@ -6,3 +6,10 @@
  *= require styles
  *= require datepicker
 */
+.input-prepend .add-on, .input-prepend .btn {
+    margin-right: 0px;
+}
+
+.input-prepend .add-on, .input-append .add-on, .input-prepend .btn, .input-append .btn {
+    margin-left: 0px;
+}

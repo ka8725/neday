@@ -24,15 +24,6 @@
               <dd><%= c.value %></dd>
             <% end %>
         </dl>
-        <strong>Контакты</strong>
-        <dl class="page-header">
-          <dt>Email</dt>
-          <dd><%= @user.email %></dd>
-          <% @user.contacts.each do |c| %>
-            <dt><%= c.contact_type.name %></dt>
-            <dd><%= c.value %></dd>
-          <% end %>
-        </dl>
         <strong>Интересующие виды спорта</strong>
         <ul>
           <% @user.sports.each do |s| %>
