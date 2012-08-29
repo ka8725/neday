@@ -6,8 +6,8 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :home, t('navbar.home'), root_path
     primary.item :events, t('navbar.events'), events_path
     primary.item :opponents, t('navbar.opponents'), users_path
-    primary.item :teams, t('navbar.teams'), ''
-    primary.item :tournaments, t('navbar.tournaments'), ''
+#    primary.item :teams, t('navbar.teams'), ''
+#    primary.item :tournaments, t('navbar.tournaments'), ''
     primary.dom_class = 'nav'
   end
 end
