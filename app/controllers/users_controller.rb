@@ -5,4 +5,14 @@ class UsersController < InheritedResources::Base
     @users = User.paginate(:page => params[:page])
   end
 
+  def created_events
+    @events = Event.find_all_by_owner_id(params[:user_id])#.paginate(:page => params[:page])
+    render '/shared/_events_list'
+  end
+    
+  def involved_events
+    @events = User.find(params[:user_id]).events.paginate(:page => params[:page])
+    render '/shared/_events_list'
+  end
+
 end

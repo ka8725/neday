@@ -2,7 +2,9 @@ Neday::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root :to => "home#index"
   resources :users do
-    resources :events
+    # resources :events
+    match 'created_events' => 'users#created_events', :as => :created_events, :via => 'get'
+    match 'involved_events' => 'users#involved_events', :as => :involved_events, :via => 'get'
   end
   resources :events
   resources :event_members, :only => [:create, :destroy]
