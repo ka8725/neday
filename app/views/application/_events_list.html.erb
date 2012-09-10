@@ -15,7 +15,7 @@
             <p>Вакантных мест: <%= event.max_number_members - event.members.count %></p>
             <%= link_to "Детально", event %>
           </div>
-          <%= render :partial => '/shared/add_remove_eventmember_button', :locals => {:event => event} %>
+          <%= render :partial => 'add_remove_eventmember_button', :locals => {:event => event} %>
         </div>
       </li>
     <% end %>

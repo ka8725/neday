@@ -3,7 +3,6 @@ class EventsController < InheritedResources::Base
 
   def index
     @events = Event.paginate(:page => params[:page])
-    render '/shared/_events_list'
   end
 
   def create(options={}, &block)

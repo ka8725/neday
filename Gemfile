@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 gem 'jquery-rails'
 gem 'rails', '3.2.6'
-gem 'mysql2'
+gem 'pg'
 gem 'json'
 gem 'geocoder'
 gem 'devise'

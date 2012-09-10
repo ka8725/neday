@@ -1,7 +1,0 @@
-<div class="span1">
-  <% if event.members.include?(current_user) %>
-    <%= link_to 'Отказываюсь участвовать', event_member_path(event), :method => :delete, :class => 'btn btn-danger' %>
-  <% else %>
-    <%= link_to 'Буду участвовать', event_members_path(:event_id => event.id), :method => :post, :class => 'btn btn-primary' %>
-  <% end %>
-</div>
