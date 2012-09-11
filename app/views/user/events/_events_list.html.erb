@@ -14,11 +14,12 @@
           <div class="span3">
             <p>Вакантных мест: <%= event.max_number_members - event.members.count %></p>
             <%= link_to "Детально", event %>
+            <%= link_to "Редактировать", edit_user_user_event_path(current_user, event) %>
           </div>
           <%= render :partial => 'add_remove_eventmember_button', :locals => {:event => event} %>
         </div>
       </li>
     <% end %>
   </ul>
-  <%= will_paginate %>
+  <%#= will_paginate %>
 </div>
