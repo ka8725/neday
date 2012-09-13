@@ -41,7 +41,6 @@ group :assets do
 end
 
 group :development do
-  gem 'heroku'
   gem 'guard-rspec'
   gem 'jammit-s3'
   gem 'sqlite3'
