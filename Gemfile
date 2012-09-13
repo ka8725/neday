@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 gem 'jquery-rails'
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.8'
 gem 'pg'
 gem 'json'
 gem 'geocoder'
