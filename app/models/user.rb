@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   has_many :sports, :through => :user_sports
   has_many :events, :foreign_key => 'owner_id'
   has_many :event_members
-  has_many :events, :through => :event_members
+  has_many :visited_events, :through => :event_members, :source =>:event
 
   def name
     "#{first_name} #{last_name}".strip
