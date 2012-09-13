@@ -3,8 +3,8 @@ rvm:
   - 1.9.2
 before_script:
   - "cp config/database.example.yml config/database.yml"
-  - createdb neday_test
-  - "RAILS_ENV=test bundle exec rake db:schema:load"
+  - psql -c 'create database neday_test;' -U postgres
+  - "RAILS_ENV=test bundle exec rake db:migrate"
 script:
   - "bundle exec rspec"
 

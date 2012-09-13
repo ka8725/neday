@@ -5,4 +5,4 @@ test:
   adapter: postgresql
   database: neday_test
   encoding: utf8
-  username: root
+  username: postgres
