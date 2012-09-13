@@ -30,7 +30,10 @@
             <li><%= s.name %></li>
           <% end %>
         </ul>
-        <strong><%= link_to 'События пользователя', user_events_path(@user)%></strong>
+        <ul class ="unstyled">
+        <li><strong><%= link_to 'События пользователя', user_events_path(@user)%></strong></li>
+        <li><strong><%= link_to "#{@user.name} участвует в событиях", user_visited_events_path(@user) %></strong></li>
+        <ul>
       </div>
       <div class="span4">
         <strong>Место обитания</strong>

@@ -4,6 +4,7 @@ Neday::Application.routes.draw do
   resources :users do
     scope :module => :user do
       resources :events
+      resources :visited_events , :only => [:index]
     end
   end
   namespace :user, :as => :my do
