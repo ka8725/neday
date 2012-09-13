@@ -52,9 +52,9 @@ SimpleNavigation::Configuration.run do |navigation|
 
     if user_signed_in?
       primary.item :my_profile, 'Моя страница', user_path(current_user)
-      primary.item :new_event, 'Создать событие', new_user_event_path
-      primary.item :user_events, 'Созданные события', user_events_path#(current_user)
-      primary.item :member_events, 'Посещаемые события'#, user_events_path(current_user)
+      primary.item :new_event, 'Создать событие', new_user_event_path(current_user)
+      primary.item :user_events, 'Созданные события', my_events_path
+      primary.item :member_events, 'Посещаемые события', user_events_path(current_user)
       primary.item :sign_out, t('devise.form.sign_out'), destroy_user_session_path, :method => :delete
     else
       primary.item :sign_in, t('devise.form.sign_in'), new_session_path(:user)
