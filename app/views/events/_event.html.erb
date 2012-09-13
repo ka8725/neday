@@ -1,0 +1,16 @@
+<li class=''>
+  <div class="row">
+    <div class="span1">
+      <%= image_tag(event.sport.icon, :alt => event.sport.name, :title => event.sport.name) %>
+    </div>
+    <div class="span3">
+      <p><%= event.place.name %></p>
+      <p><%= event.start_at %></p>
+    </div>
+    <div class="span3">
+      <p>Вакантных мест: <%= event.max_number_members - event.members.count %></p>
+      <%= link_to "Детально", event %>
+    </div>
+    <%= render :partial => 'add_remove_eventmember_button', :locals => {:event => event} %>
+  </div>
+</li>
