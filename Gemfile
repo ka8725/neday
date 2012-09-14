@@ -53,4 +53,5 @@ group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'mocha'
+  gem 'rb-inotify', '~> 0.8.8'
 end

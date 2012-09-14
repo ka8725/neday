@@ -13,6 +13,8 @@
             <ul class='unstyled'>
               <li><%= link_to user.name, user %></li>
               <li><%= mail_to user.email %></li>
+              <li><%= link_to 'События пользователя', user_events_path(user) %></li>
+              <li><%= link_to "#{user.name} участвует в событиях", user_visited_events_path(user) %></li>
               <% user.contacts.each do |c| %>
                 <li><%= c.name %></li>
               <% end %>
