@@ -1,9 +1,5 @@
 class User::VisitedEventsController < InheritedResources::Base
  
-  private
-  
-  def begin_of_association_chain
-    User.find_by_id(params[:user_id])
-  end
+  belongs_to :user, :finder => :find_by_id!, :param => :user_id
 
 end
