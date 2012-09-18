@@ -2,7 +2,7 @@
   <header><h4>Контакты</h4></header>
   <%= f.input :email, :hint => 'Не рекомендуется изменять', :label => false do %>
     <div class="input-prepend">
-      <span class="add-on"> @ </span>
+      <span class="add-on"><div class='icon-envelope'></div></span>
       <%= f.email_field :email, :placeholder => 'Электронная почта' %>
     </div>
   <% end %>
@@ -16,7 +16,7 @@
         </span>
         <%= fc.text_field :value, :placeholder => 'Контакт' %>
       </div>
-    <% end %>  
+    <% end %>
   <% end %>
   <%= f.link_to_add "Добавить", :contacts %>
 </div>
