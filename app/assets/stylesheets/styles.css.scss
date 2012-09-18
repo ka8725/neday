@@ -18,9 +18,9 @@ body {padding-top: 60px;background: image_url('bg.png');}
 .yandex-map {width:300px;height:250px;}
 
 .input-prepend .add-on, .input-prepend .btn {
-    margin-right: 0px;
+  margin-right: -5px;
 }
 
 .input-prepend .add-on, .input-append .add-on, .input-prepend .btn, .input-append .btn {
-    margin-left: 0px;
+  margin-left: 0px;
 }

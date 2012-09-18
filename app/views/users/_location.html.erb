@@ -2,12 +2,9 @@
   <header><h4>Место обитания</h4></header>
   <%= f.simple_fields_for :location, :build_association => true do |fl| %>
     <%= fl.input :address, :label => false do %>
-      <div class="input-prepend">
-        <span class="add-on">
-          <div class="icon-map-marker"></div>
-        </span>
-        <%= fl.text_field :address, :placeholder => 'Адрес', :class => 'span5' %>
-      </div>
+      <%= input_prepend('icon-map-marker') do %>
+        <%= fl.text_field :address, :placeholder => 'Адрес', :class => 'input-xxlarge' %>
+      <% end %>
     <% end %>
     <div class="yandex-map">
       <%= add_location_to_map(@user.location) %>

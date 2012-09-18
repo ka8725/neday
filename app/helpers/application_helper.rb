@@ -45,4 +45,12 @@ module ApplicationHelper
       end
     end
   end
+
+  def input_prepend(symbol_class, &block)
+    content_tag :div, :class => 'input-prepend' do
+      html = content_tag(:span, content_tag(:div, nil, :class => symbol_class), :class => 'add-on')
+      html << with_output_buffer(&block) if block_given?
+      html
+    end
+  end
 end
