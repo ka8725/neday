@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120620124610) do
+ActiveRecord::Schema.define(:version => 20120920214004) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "name"
@@ -65,9 +65,15 @@ ActiveRecord::Schema.define(:version => 20120620124610) do
     t.integer  "location_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "icon"
   end
 
   add_index "places", ["location_id"], :name => "index_places_on_location_id"
+
+  create_table "places_sports", :id => false, :force => true do |t|
+    t.integer "place_id"
+    t.integer "sport_id"
+  end
 
   create_table "slides", :force => true do |t|
     t.string   "file"
