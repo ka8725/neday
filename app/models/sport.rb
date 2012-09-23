@@ -5,4 +5,5 @@ class Sport < ActiveRecord::Base
   has_many :user_sports, :dependent => :destroy
   has_many :users, :through => :user_sports
   has_many :events
+  has_and_belongs_to_many :places
 end
