@@ -10,7 +10,7 @@
       <%= link_to "Детально", place %>
     </div>
     <div class="span2">
-      <%= place.sports.each{|sport| sport.name} %>
+      <%= place.sports.map(&:name).join(', ') %>
     </div>
   </div>
 </li>
