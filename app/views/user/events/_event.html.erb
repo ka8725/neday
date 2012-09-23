@@ -8,7 +8,6 @@
       <p><%= event.start_at %></p>
     </div>
     <div class="span3">
-      <p>Вакантных мест: <%= event.max_number_members - event.members.count %></p>
       <%= link_to "Детально", event %>
       <%= link_to "Редактировать", edit_user_event_path(current_user, event) %>
     </div>

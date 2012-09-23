@@ -1,0 +1,16 @@
+<li class=''>
+  <div class="row">
+    <div class="span2">
+      <%= image_tag(place.icon, :alt => place.name, :title => place.name) %>
+    </div>
+    <div class="span3">
+      <p><%= place.name %></p>
+      <p><%= place.location.address %></p>
+      <p>тел. +375292929292</p>
+      <%= link_to "Детально", place %>
+    </div>
+    <div class="span2">
+      <%= place.sports.map(&:name).join(', ') %>
+    </div>
+  </div>
+</li>
