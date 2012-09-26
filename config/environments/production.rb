@@ -22,7 +22,6 @@ Neday::Application.configure do
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = 'public'
-  # config.assets.initialize_on_precompile = false
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
