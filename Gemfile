@@ -25,6 +25,7 @@ gem 'inherited_resources'
 gem 'bootstrap-will_paginate'
 gem 'rb-readline'
 gem "time_diff"
+gem 'twitter-bootstrap-rails'
 
 group :development, :production do
   gem 'faker', :require => false
@@ -35,7 +36,6 @@ end
 group :assets do
   gem 'sass-rails'
   gem 'compass-rails'
-  gem 'twitter-bootstrap-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem "asset_sync"
