@@ -2,7 +2,7 @@
 
 # Neday
 This is a social network wich helps to organize sport events. You can
-manage your events, teams, find opponents and etc.
+manage your events, find opponents and etc.
 
 ## Installation
 - clone repository
