@@ -20,13 +20,13 @@ ContactType.create!(:name => 'Jabber',            :icon => File.new(File.join(Ra
 
 hash_SummerSportName_PathToSportIcon = { 'Академическая гребля'        => 'spec/images/sport_icons/300px-Rowing_pictogram.svg.png',
                                          'Бадминтон'                   => 'spec/images/sport_icons/300px-Badminton_pictogram.svg.png',
-					 'Баскетбол'                   => 'spec/images/sport_icons/300px-Basketball_pictogram.svg.png',
-					 'Бокс'                        => 'spec/images/sport_icons/300px-Boxing_pictogram.svg.png',
+                    					 'Баскетбол'                   => 'spec/images/sport_icons/300px-Basketball_pictogram.svg.png',
+                    					 'Бокс'                        => 'spec/images/sport_icons/300px-Boxing_pictogram.svg.png',
                                          'Греко-римская борьба'        => 'spec/images/sport_icons/300px-Wrestling_pictogram.svg.png',
                                          'Вольная борьба'              => 'spec/images/sport_icons/300px-Wrestling_pictogram.svg.png',
                                          'Велоспорт'                   => 'spec/images/sport_icons/300px-Cycling_(road)_pictogram.svg.png',
                                          'Водное поло'                 => 'spec/images/sport_icons/300px-Water_polo_pictogram.svg.png',
- 					 'Плавание'	              => 'spec/images/sport_icons/300px-Swimming_pictogram.svg.png',
+                     					 'Плавание'                    => 'spec/images/sport_icons/300px-Swimming_pictogram.svg.png',
                                          'Прыжки в воду'               => 'spec/images/sport_icons/300px-Diving_pictogram.svg.png',
                                          'Синхронное плавание'         => 'spec/images/sport_icons/300px-Synchronized_swimming_pictogram.svg.png',
                                          'Волейбол'                    => 'spec/images/sport_icons/300px-Volleyball_(indoor)_pictogram.svg.png',
@@ -71,10 +71,10 @@ hash_WinterSportName_PathToSportIcon = { 'Биатлон'            => 'spec/im
 
 hash_SummerSportName_PathToSportIcon.each_pair do |name, path|
     Sport.create!(:name => name, :icon => File.new(File.join(Rails.root, path)), :season => 'Летние виды спорта')
-  end
+end
 hash_WinterSportName_PathToSportIcon.each_pair do |name, path|
     Sport.create!(:name => name, :icon => File.new(File.join(Rails.root, path)), :season => 'Зимние виды спорта')
-  end
+end
 
 60.times { User.create! :first_name => Faker::Name.first_name,
                         :last_name => Faker::Name.last_name,
@@ -83,3 +83,4 @@ hash_WinterSportName_PathToSportIcon.each_pair do |name, path|
                         :password_confirmation => 'password123',
                         :location => Location.new(:address => Faker::Address.street_address),
                         :sport_ids => Sport.all.map(&:id).shuffle[0...5] }
+

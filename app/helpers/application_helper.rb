@@ -1,23 +1,4 @@
 module ApplicationHelper
-  FLASH_TYPES = {:notice => 'info', :error => 'error', :alert => 'warning'}.freeze
-
-  def flash_class(level)
-    FLASH_TYPES[level]
-  end
-
-  def flash_messages
-    res = ''
-    [:notice, :error, :alert].each do |level|
-      if flash[level].present?
-        res << %Q{<div data-alert="alert" class="alert alert-#{flash_class(level)} fade in">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <p>#{flash[level]}</p>
-        </div>}.html_safe
-      end
-    end
-    res.html_safe
-  end
-
   def init_yandex_map
     raise "Yandex map already initialized" if @yandex_map_initialized # It is impossible to initialize map twice
     res = javascript_tag do
@@ -52,5 +33,15 @@ module ApplicationHelper
       html << with_output_buffer(&block) if block_given?
       html
     end
+  end
+
+  def icon_for_provider(provider)
+    klass = case provider
+    when :google
+      'icon-google-plus-sign'
+    else
+      "icon-#{provider}"
+    end
+    content_tag :i, nil , :class => klass
   end
 end
