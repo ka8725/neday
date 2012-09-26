@@ -14,7 +14,6 @@ gem 'carrierwave', :git => "git://github.com/jnicklas/carrierwave.git"
 gem 'rmagick'
 gem 'simple-navigation'
 gem 'responders'
-gem 'sass-rails', '~> 3.2.3'
 gem 'i18n_generators'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'cancan'
@@ -34,8 +33,9 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'sass-rails'
   gem 'compass-rails'
-  gem 'twitter-bootstrap-rails', '~> 2.0.7'
+  gem 'twitter-bootstrap-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem "asset_sync"
