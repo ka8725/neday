@@ -1,5 +1,0 @@
-s3_bucket: neday
-s3_access_key_id: <%= ENV['AWS_KEY'] %>
-s3_secret_access_key: <%= ENV['AWS_SECRET'] %>
-s3_upload_files:
-  -  public/assets/**/*

@@ -23,10 +23,6 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    POpen4 (0.1.4)
-      Platform (>= 0.4.0)
-      open4
-    Platform (0.4.0)
     actionmailer (3.2.8)
       actionpack (= 3.2.8)
       mail (~> 2.4.4)
@@ -55,6 +51,9 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    asset_sync (0.5.0)
+      activemodel
+      fog
     bcrypt-ruby (3.0.1)
     bootstrap-will_paginate (0.0.9)
       will_paginate
@@ -128,12 +127,6 @@ GEM
     inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
       responders (~> 0.6)
-    jammit (0.6.5)
-      yui-compressor (>= 0.9.3)
-    jammit-s3 (0.6.0.2)
-      jammit (>= 0.5.4)
-      mimemagic (>= 0.1.7)
-      s3 (>= 0.3.7)
     journey (1.0.4)
     jquery-rails (2.1.3)
       railties (>= 3.1.0, < 5.0)
@@ -163,7 +156,6 @@ GEM
       webrobots (~> 0.0, >= 0.0.9)
     metaclass (0.0.1)
     mime-types (1.19)
-    mimemagic (0.1.9)
     mocha (0.12.4)
       metaclass (~> 0.0.1)
     multi_json (1.3.6)
@@ -204,11 +196,9 @@ GEM
       multi_json
       omniauth (~> 1.1.0)
       omniauth-oauth2 (~> 1.0)
-    open4 (1.3.0)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    proxies (0.2.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -253,8 +243,6 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     ruby-hmac (0.4.0)
-    s3 (0.3.11)
-      proxies (~> 0.2.0)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -296,13 +284,12 @@ GEM
       rack (>= 1.0)
     webrobots (0.0.13)
     will_paginate (3.0.3)
-    yui-compressor (0.9.6)
-      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  asset_sync
   bootstrap-will_paginate
   cancan
   carrierwave!
@@ -319,7 +306,6 @@ DEPENDENCIES
   guard-rspec
   i18n_generators
   inherited_resources
-  jammit-s3
   jquery-rails
   json
   mocha

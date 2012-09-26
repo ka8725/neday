@@ -38,11 +38,12 @@ group :assets do
   gem 'twitter-bootstrap-rails', '~> 2.0.7'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem "asset_sync"
 end
 
 group :development do
   gem 'guard-rspec'
-  gem 'jammit-s3'
+#  gem 'jammit-s3'
   gem 'sqlite3'
 end
 
