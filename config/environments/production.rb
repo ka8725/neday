@@ -21,7 +21,7 @@ Neday::Application.configure do
   config.assets.digest = true
 
   # Defaults to Rails.root.join("public/assets")
-  config.assets.manifest = 'public'
+  # config.assets.manifest = 'public'
   # config.assets.initialize_on_precompile = false
 
   # Specifies the header that your server uses for sending files
