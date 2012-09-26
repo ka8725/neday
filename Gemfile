@@ -26,6 +26,8 @@ gem 'bootstrap-will_paginate'
 gem 'rb-readline'
 gem "time_diff"
 gem 'twitter-bootstrap-rails'
+gem 'sass-rails'
+gem 'compass-rails'
 
 group :development, :production do
   gem 'faker', :require => false
@@ -34,8 +36,6 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'compass-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem "asset_sync"
