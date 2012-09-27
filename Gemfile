@@ -25,7 +25,7 @@ gem 'inherited_resources'
 gem 'bootstrap-will_paginate'
 gem 'rb-readline'
 gem "time_diff"
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'sass-rails'
 gem 'compass-rails'
 
@@ -43,7 +43,6 @@ end
 
 group :development do
   gem 'guard-rspec'
-#  gem 'jammit-s3'
   gem 'sqlite3'
 end
 
