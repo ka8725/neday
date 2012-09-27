@@ -25,7 +25,7 @@ gem 'inherited_resources'
 gem 'bootstrap-will_paginate'
 gem 'rb-readline'
 gem "time_diff"
-gem 'twitter-bootstrap-rails', :ref => '0214cd7255', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/ka8725/twitter-bootstrap-rails.git'
 gem 'sass-rails'
 gem 'compass-rails'
 
