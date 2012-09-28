@@ -16,6 +16,17 @@
 // Font Awesome
 @import "fontawesome";
 
+@font-face {
+  font-family: "FontAwesome";
+  src: url(@fontAwesomeEotPath);
+  src: url(@fontAwesomeEotPath) format("embedded-opentype"),
+    url(@fontAwesomeWoffPath) format("woff"),
+    url(@fontAwesomeTtfPath) format("truetype"),
+    url(@fontAwesomeSvgPath) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Your custom LESS stylesheets goes here
 //
 // Since bootstrap was imported above you have access to its mixins which
