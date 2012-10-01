@@ -4,15 +4,19 @@
 This is a social network wich helps to organize sport events. You can
 manage your events, find opponents and etc.
 
+## Requirements
+
+- postgresql
+- ruby 1.9.3
+
 ## Installation
 - clone repository
 - create config for **database.yml**
-- bundle install --path=vendor/bundle
-- bundle exec rake db:create
-- bundle exec rake db:migrate
-- bundle exec rails s
-- bundle exec rake db:seed
-- go to **/admin** to upload slides and configure your site
+- `bundle install`
+- `bundle exec rake db:create`
+- `bundle exec rake db:migrate`
+- `bundle exec rails s`
+- `bundle exec rake db:seed`
 
 ## Test Driven Development (TDD)
 If you are going to make any change please write tests before. Using tests is very simple: just type command `guard` in terminal
