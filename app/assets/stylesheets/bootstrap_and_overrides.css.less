@@ -8,13 +8,24 @@
 // Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
 // Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
 //       have the proper paths. So for now we use the absolute path.
-@fontAwesomeEotPath: "/assets/fontawesome-webfont.eot";
-@fontAwesomeWoffPath: "/assets/fontawesome-webfont.woff";
-@fontAwesomeTtfPath: "/assets/fontawesome-webfont.ttf";
-@fontAwesomeSvgPath: "/assets/fontawesome-webfont.svg";
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-path("fontawesome-webfont.svg");
 
 // Font Awesome
 @import "fontawesome";
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url(@fontAwesomeEotPath);
+  src: url(@fontAwesomeEotPath) format("embedded-opentype"),
+    url(@fontAwesomeWoffPath) format("woff"),
+    url(@fontAwesomeTtfPath) format("truetype"),
+    url(@fontAwesomeSvgPath) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Your custom LESS stylesheets goes here
 //
