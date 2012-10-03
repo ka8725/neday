@@ -4,7 +4,6 @@
     <%= f.association :sport, :prompt => 'Выберите' %>
     <%= f.simple_fields_for :place, :build_association => true do |fp| %>
       <%= fp.input :name, :placeholder => 'Название места' %>
-      <%= fp.file_field :icon %>
       <%= fp.simple_fields_for :location, :build_association => true do |fl| %>
         <%= fl.input :address, :placeholder => 'Место проведения' %>
       <% end %>
