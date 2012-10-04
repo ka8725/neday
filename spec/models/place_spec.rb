@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Place do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:place) { FactoryGirl.create(:place) }
+
+  context :factory do
+    it { place.should be_valid }
+    it { place.should be_persisted }
+  end
 end
