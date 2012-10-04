@@ -1,7 +1,7 @@
 <li class=''>
   <div class="row">
     <div class="span2">
-      <%= image_tag(place.icon.url, :alt => place.name, :title => place.name) %>
+      <%= image_tag(place.icon_url(:thumb).to_s, :alt => place.name, :title => place.name) %>
     </div>
     <div class="span3">
       <p><%= place.name %></p>

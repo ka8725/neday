@@ -1,5 +1,7 @@
 class Place < ActiveRecord::Base
-  attr_accessible :name, :location_attributes
+  attr_accessible :name, :location_attributes, :icon
+
+  mount_uploader :icon, PlaceIconUploader
 
   has_and_belongs_to_many :sports
   has_many :events, :dependent => :restrict
