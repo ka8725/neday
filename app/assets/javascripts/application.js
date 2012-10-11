@@ -10,4 +10,6 @@
 //= require yandex_map
 //= require nested_form
 //= require main
-//= require bootstrap-datepicker
+//= require jquery.ui.datepicker
+//= require jquery-ui-timepicker-addon
+//= require jquery-ui-sliderAccess

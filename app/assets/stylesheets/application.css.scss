@@ -4,5 +4,6 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require bootstrap_and_overrides
  *= require styles
- *= require datepicker
+ *= require jquery.ui.datepicker
+ *= require jquery-ui-timepicker-addon
 */
