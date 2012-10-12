@@ -16,6 +16,7 @@ describe Event do
   context :validations do
     it { should validate_presence_of(:owner_id) }
     it { should validate_presence_of(:start_at) }
+    it { should validate_presence_of(:sport_id) }
   end
 
   context 'factory' do
