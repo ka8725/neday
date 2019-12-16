@@ -95,7 +95,7 @@ GEM
     domain_name (0.5.4)
       unf (~> 0.0.3)
     erubis (2.7.0)
-    excon (0.16.4)
+    excon (0.71.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
