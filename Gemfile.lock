@@ -119,7 +119,7 @@ GEM
       ruby-hmac
     formatador (0.2.3)
     fssm (0.2.9)
-    geocoder (1.1.3)
+    geocoder (1.6.3)
     get_or_build (0.0.3)
     gravtastic (3.2.6)
     guard (1.4.0)
